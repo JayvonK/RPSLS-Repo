@@ -3,6 +3,11 @@
     src: url(../assets/ImPerfect23.otf);
 }
 
+@font-face {
+    font-family: Fira Code;
+    src: url(../assets/FiraCode-Regular.ttf);
+}
+
 .bodyBg1 {
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,0,75,1) 100%);
@@ -53,4 +58,8 @@
 .modal-content {
     width: 660px;
     background-color: #292727;
+}
+
+.firaCode {
+    font-family: Fira Code;
 }
