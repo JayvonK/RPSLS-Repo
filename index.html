@@ -28,17 +28,31 @@
             <div class="col">
                 <img id="volume" src="./assets/muted icon.png" alt="mute icon">
             </div>
-
-
-
-
         </div>
     </div>
 
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <img id="howToPlayBtn" src="./assets/howToPlayshuriken.png" alt="">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <img id="howToPlayBtn" src="./assets/howToPlayshuriken.png" alt="">
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="col">
                 <img id="playBtn" src="./assets/Play Shuriken.png" alt="">
