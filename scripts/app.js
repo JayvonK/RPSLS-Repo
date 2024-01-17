@@ -8,14 +8,14 @@ function musicPlay(){
     music.play();
 }
 
-musicPlay();
-
 function stopMuic() {
     music.pause();
 }
 
 
 volume.addEventListener('click', () => {
+    console.log("click");
+    console.log(volume.src);
     if(volume.src === "./assets/volume icon.png")
     {
         musicPlay();
