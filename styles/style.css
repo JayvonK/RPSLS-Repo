@@ -3,6 +3,11 @@
     src: url(../assets/ImPerfect23.otf);
 }
 
+.bodyBg1 {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,9,64,1) 54%, rgba(14,0,110,1) 100%);
+}
+
 .navbarHeight {
     height: 150px;
 }
