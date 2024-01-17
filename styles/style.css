@@ -41,3 +41,7 @@
 .titleSize {
     font-size: 96px;
 }
+
+.none {
+    display: none;
+}
