@@ -1,5 +1,5 @@
 import { musicPlay, stopMusic } from "./music.js";
-import { add1v1, addAI } from "./addBtns.js";
+import { addVersus } from "./addVersus.js";
 
 let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
@@ -31,7 +31,9 @@ volume.addEventListener('click', () => {
 playBtn.addEventListener('click', (event) => {
     modeBtn.className = "none";
     modal.className += " none";
-    playCol.className += " none";
-    add1v1();
-    addAI();
+    playBtn.className = "none";
+    playCol.className = "none";
+    addVersus();
 })
+
+export { playCol }
