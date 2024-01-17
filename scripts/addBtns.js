@@ -10,4 +10,15 @@ function add1v1 () {
     inject1v1.appendChild(img1v1);
 }
 
-export { add1v1 }
+function addAI () {
+    let imgAI = document.createElement("img");
+    imgAI.src = "./assets/AI shuriken.png";
+    imgAI.addEventListener('click', (event) => {
+        console.log("1v1 working");
+    })
+    injectAI.appendChild(imgAI);
+}
+
+
+
+export { add1v1, addAI }

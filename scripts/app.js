@@ -1,5 +1,5 @@
 import { musicPlay, stopMusic } from "./music.js";
-import { add1v1 } from "./addBtns.js";
+import { add1v1, addAI } from "./addBtns.js";
 
 let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
@@ -33,4 +33,5 @@ playBtn.addEventListener('click', (event) => {
     modal.className += " none";
     playCol.className += " none";
     add1v1();
+    addAI();
 })
