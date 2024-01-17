@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ImPerfect;
+    src: url(../assets/ImPerfect23.otf);
+}
+
 .navbarHeight {
     height: 150px;
 }
@@ -6,6 +11,19 @@
     text-align: center;
 }
 
-.black {
+.blackBg {
     background-color: black;
+}
+
+.white {
+    color: white;
+}
+
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.imPerfect {
+    font-family: ImPerfect;
 }
