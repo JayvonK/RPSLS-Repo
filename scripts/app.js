@@ -15,16 +15,18 @@ function stopMuic() {
 
 volume.addEventListener('click', () => {
     console.log("click");
-    console.log(volume.src);
-    if(volume.src === "./assets/volume icon.png")
-    {
-        musicPlay();
-        volume.src = "./assets/mute icon.png";
-        console.log("i woke");
-    } else if (volume.src === "./assets/mute icon.png")
+    console.log(volume.alt);
+    if(volume.alt === "volume icon")
     {
         stopMuic();
+        volume.src = "./assets/muted icon.png";
+        volume.alt = "mute icon"
+        console.log("i woke");
+    } else if (volume.alt === "mute icon")
+    {
+        musicPlay();
         volume.src = "./assets/volume icon.png";
+        volume.alt = "volume icon"
         console.log("i wokde");
     }
 })
