@@ -1,12 +1,12 @@
 import { musicPlay, stopMusic } from "./music.js";
+import { add1v1 } from "./addBtns.js";
 
 let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
 let howToPlayBtn = document.getElementById("howToPlayBtn");
 let volume = document.getElementById("volume");
 let modal = document.getElementById("btnModal");
-let injectAI = document.getElementById("injectAI");
-let inject1v1 = document.getElementById("inject1v1");
+let playCol = document.getElementById("playCol");
 
 
 
@@ -31,4 +31,6 @@ volume.addEventListener('click', () => {
 playBtn.addEventListener('click', (event) => {
     modeBtn.className = "none";
     modal.className += " none";
+    playCol.className += " none";
+    add1v1();
 })
