@@ -8,4 +8,4 @@ function stopMusic() {
     music.pause();
 }
 
-export {musicPlay, stopMusic}
+export {musicPlay, stopMusic, music}

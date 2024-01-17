@@ -1,4 +1,4 @@
-import { musicPlay, stopMusic } from "./music.js";
+import { musicPlay, stopMusic, music } from "./music.js";
 import { addVersus } from "./addVersus.js";
 
 let playBtn = document.getElementById("playBtn");
@@ -8,6 +8,7 @@ let volume = document.getElementById("volume");
 let modal = document.getElementById("btnModal");
 let playCol = document.getElementById("playCol");
 
+music.volume = 0.3;
 
 
 volume.addEventListener('click', () => {

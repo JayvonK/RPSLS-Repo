@@ -1,4 +1,4 @@
-import { addSuddenDeath, addFT3 } from "./addGameModes.js";
+import { addSuddenDeath, addFT3, addFT5 } from "./addGameModes.js";
 
 let injectAI = document.getElementById("injectAI");
 let inject1v1 = document.getElementById("inject1v1");
@@ -9,8 +9,10 @@ function addVersus () {
     img1v1.addEventListener('click', (event) => {
         console.log("1v1 working");
         img1v1.className = "none";
+        imgAI.className = "none";
         addFT3();
         addSuddenDeath();
+        addFT5();
     })
     inject1v1.appendChild(img1v1);
 

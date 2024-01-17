@@ -7,7 +7,7 @@ function addFT3()
     let imgFT3 = document.createElement("img");
     imgFT3.src = "./assets/FT3 shuriken.png";
     imgFT3.addEventListener('click', (event) => {
-        console.log("sudden death")
+        console.log("first to 3")
     })
 
     playCol.appendChild(imgFT3);
@@ -15,7 +15,6 @@ function addFT3()
 
 function addSuddenDeath()
 {
-    playCol.className = "col";
     let imgSuddenDeath = document.createElement("img");
     imgSuddenDeath.src = "./assets/sudden death shuriken.png";
     imgSuddenDeath.addEventListener('click', (event) => {
@@ -27,8 +26,13 @@ function addSuddenDeath()
 
 function addFT5() 
 {
-    imgAI.className = "none";
-    let imgFT5 = document.createElement("")
+    let imgFT5 = document.createElement("img");
+    imgFT5.src = "./assets/FT5 shuriken.png";
+    imgFT5.addEventListener('click', (event) => {
+        console.log("first to 5");
+    })
+
+    injectAI.appendChild(imgFT5)
 }
 
 export { addFT3, addSuddenDeath, addFT5};

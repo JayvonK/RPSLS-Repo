@@ -8,6 +8,10 @@
     src: url(../assets/FiraCode-Regular.ttf);
 }
 
+body {
+    overflow: hidden;
+}
+
 .bodyBg1 {
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,0,75,1) 100%);
@@ -16,6 +20,10 @@
 
 .lotus {
     background-image: url(../assets/undefined\ -\ Imgur.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
 .navbarHeight {
