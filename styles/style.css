@@ -45,3 +45,12 @@
 .none {
     display: none;
 }
+
+.modalHeader {
+    font-size: 55px;
+}
+
+.modal-content {
+    width: 660px;
+    background-color: #292727;
+}
