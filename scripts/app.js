@@ -4,7 +4,7 @@ let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
 let howToPlayBtn = document.getElementById("howToPlayBtn");
 let volume = document.getElementById("volume");
-let modal = document.getElementById("modal");
+let modal = document.getElementById("btnModal");
 let injectAI = document.getElementById("injectAI");
 let inject1v1 = document.getElementById("inject1v1");
 
@@ -29,6 +29,6 @@ volume.addEventListener('click', () => {
 })
 
 playBtn.addEventListener('click', (event) => {
-    modeBtn.src = "";
-    howToPlayBtn.src = "";
+    modeBtn.className = "none";
+    modal.className += " none";
 })
