@@ -5,7 +5,12 @@
 
 .bodyBg1 {
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,9,64,1) 54%, rgba(14,0,110,1) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,0,75,1) 100%);
+    
+}
+
+.lotus {
+    background-image: url(../assets/undefined\ -\ Imgur.gif);
 }
 
 .navbarHeight {
