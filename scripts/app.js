@@ -4,6 +4,9 @@ let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
 let howToPlayBtn = document.getElementById("howToPlayBtn");
 let volume = document.getElementById("volume");
+let modal = document.getElementById("modal");
+let injectAI = document.getElementById("injectAI");
+let inject1v1 = document.getElementById("inject1v1");
 
 
 
