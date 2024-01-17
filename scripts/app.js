@@ -1,16 +1,10 @@
+import { musicPlay, stopMusic } from "./music.js";
+
 let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
 let howToPlayBtn = document.getElementById("howToPlayBtn");
-let music = document.getElementById("music");
 let volume = document.getElementById("volume");
 
-function musicPlay(){
-    music.play();
-}
-
-function stopMuic() {
-    music.pause();
-}
 
 
 volume.addEventListener('click', () => {
@@ -18,7 +12,7 @@ volume.addEventListener('click', () => {
     console.log(volume.alt);
     if(volume.alt === "volume icon")
     {
-        stopMuic();
+        stopMusic();
         volume.src = "./assets/muted icon.png";
         volume.alt = "mute icon"
         console.log("i woke");
