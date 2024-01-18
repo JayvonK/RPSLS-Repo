@@ -13,8 +13,12 @@ let p1Scissors = document.getElementById("p1Scissors");
 let p1Lizzard = document.getElementById("p1Lizzard");
 let p1Spock = document.getElementById("p1Spock");
 let p1Message = document.getElementById("p1Message");
+let p2Message = document.getElementById("p2Message");
+let fightBtn = document.getElementById("fightBtn");
 
-let p1Choice;
+let p1Choice = "";
+
+let p2Choice = "";
 
 music.volume = 0.3;
 
@@ -45,6 +49,8 @@ playBtn.addEventListener('click', (event) => {
     addVersus();
 })
 
+// ROCK PAPER SCISSORS 
+
 p1Rock.addEventListener('click', (event) => {
     p1Choice = "rock";
     console.log(p1Choice);
@@ -73,6 +79,26 @@ p1Spock.addEventListener('click', (event) => {
     p1Choice = "spock";
     console.log(p1Choice);
     p1Message.innerText = "ready to battle";
+})
+
+fightBtn.addEventListener('click', (event) => {
+    if(p1Choice && p2Choice)
+    {
+        console.log("Someone Won");
+    }
+    else if(p1Choice === "" && p2Choice === "")
+    {
+        p1Message.innerText = "You didnt choose an option";
+        p2Message.innerText = "You didnt choose an option";
+    } else if (p2Choice === "")
+    {
+        p2Message.innerText = "You didnt choose an option";
+    } else if (p1Choice === "")
+    {
+        p1Message.innerText = "You didnt choose an option";
+    }
+
+    
 })
 
 export { playCol }
