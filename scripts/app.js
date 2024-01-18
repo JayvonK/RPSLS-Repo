@@ -14,6 +14,11 @@ let p1Lizzard = document.getElementById("p1Lizzard");
 let p1Spock = document.getElementById("p1Spock");
 let p1Message = document.getElementById("p1Message");
 let p2Message = document.getElementById("p2Message");
+let p2Rock = document.getElementById("p2Rock");
+let p2Paper = document.getElementById("p2Paper");
+let p2Scissors = document.getElementById("p2Scissors");
+let p2Lizzard = document.getElementById("p2Lizzard");
+let p2Spock = document.getElementById("p2Spock");
 let fightBtn = document.getElementById("fightBtn");
 
 let p1Choice = "";
@@ -76,8 +81,38 @@ p1Lizzard.addEventListener('click', (event) => {
 })
 
 p1Spock.addEventListener('click', (event) => {
-    p1Choice = "spock";
+    p2Choice = "spock";
     console.log(p1Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p2Rock.addEventListener('click', (event) => {
+    p2Choice = "rock";
+    console.log(p2Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p2Paper.addEventListener('click', (event) => {
+    p2Choice = "paper";
+    console.log(p2Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p2Scissors.addEventListener('click', (event) => {
+    p2Choice = "scissors";
+    console.log(p2Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p2Lizzard.addEventListener('click', (event) => {
+    p2Choice = "lizzard";
+    console.log(p2Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p2Spock.addEventListener('click', (event) => {
+    p2Choice = "spock";
+    console.log(p2Choice);
     p1Message.innerText = "ready to battle";
 })
 
@@ -98,7 +133,7 @@ fightBtn.addEventListener('click', (event) => {
         p1Message.innerText = "You didnt choose an option";
     }
 
-    
+
 })
 
 export { playCol }
