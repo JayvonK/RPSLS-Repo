@@ -124,16 +124,18 @@ fightBtn.addEventListener('click', (event) => {
     else if(p1Choice === "" && p2Choice === "")
     {
         p1Message.innerText = "You didnt choose an option";
+        p1Message.className = "imPerfect txtCenter red"
         p2Message.innerText = "You didnt choose an option";
+        p2Message.className = "imPerfect txtCenter red"
     } else if (p2Choice === "")
     {
         p2Message.innerText = "You didnt choose an option";
+        p2Message.className = "imPerfect txtCenter red"
     } else if (p1Choice === "")
     {
         p1Message.innerText = "You didnt choose an option";
+        p1Message.className = "imPerfect txtCenter red"
     }
-
-
 })
 
 export { playCol }

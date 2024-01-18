@@ -26,6 +26,10 @@ body {
     height: 100vh;
 }
 
+.red {
+    color: red;
+}
+
 .navbarHeight {
     height: 150px;
 }
