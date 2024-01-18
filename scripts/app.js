@@ -7,6 +7,14 @@ let howToPlayBtn = document.getElementById("howToPlayBtn");
 let volume = document.getElementById("volume");
 let modal = document.getElementById("btnModal");
 let playCol = document.getElementById("playCol");
+let p1Rock = document.getElementById("p1Rock");
+let p1Paper = document.getElementById("p1Paper");
+let p1Scissors = document.getElementById("p1Scissors");
+let p1Lizzard = document.getElementById("p1Lizzard");
+let p1Spock = document.getElementById("p1Spock");
+let p1Message = document.getElementById("p1Message");
+
+let p1Choice;
 
 music.volume = 0.3;
 
@@ -35,6 +43,36 @@ playBtn.addEventListener('click', (event) => {
     playBtn.className = "none";
     playCol.className = "none";
     addVersus();
+})
+
+p1Rock.addEventListener('click', (event) => {
+    p1Choice = "rock";
+    console.log(p1Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p1Paper.addEventListener('click', (event) => {
+    p1Choice = "paper";
+    console.log(p1Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p1Scissors.addEventListener('click', (event) => {
+    p1Choice = "scissors";
+    console.log(p1Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p1Lizzard.addEventListener('click', (event) => {
+    p1Choice = "lizzard";
+    console.log(p1Choice);
+    p1Message.innerText = "ready to battle";
+})
+
+p1Spock.addEventListener('click', (event) => {
+    p1Choice = "spock";
+    console.log(p1Choice);
+    p1Message.innerText = "ready to battle";
 })
 
 export { playCol }

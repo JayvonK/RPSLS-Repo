@@ -13,9 +13,9 @@ body {
 }
 
 .bodyBg1 {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,0,75,1) 100%);
-    
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 9, 64, 1) 100%);
+
 }
 
 .lotus {
@@ -79,4 +79,46 @@ body {
 
 .olPadding {
     padding-left: 80px;
+}
+
+.samuraiSize {
+    width: 40%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.samurai1Padding {
+    padding-right: 15%;
+}
+
+.cyan {
+    color: #01E2FE;
+}
+
+.yellow {
+    color: #FEC601;
+}
+
+.fightBtn {
+    background: rgb(106, 0, 98);
+    background: linear-gradient(90deg, rgba(106, 0, 98, 1) 0%, rgba(255, 219, 93, 1) 100%);
+    border: none;
+    border-radius: 100px;
+    width: 290px;
+    height: 86px;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vs {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
