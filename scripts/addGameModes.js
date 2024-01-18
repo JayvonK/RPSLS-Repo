@@ -1,6 +1,10 @@
 import { playCol } from "./app.js";
 import { inject1v1, injectAI } from "./addVersus.js";
 
+import { addSuddenDeathFight } from "./addFights.js";
+
+let shurikenDiv = document.getElementById("shurikenDiv");
+
 function addFT3()
 {
     playCol.className = "col";
@@ -18,7 +22,8 @@ function addSuddenDeath()
     let imgSuddenDeath = document.createElement("img");
     imgSuddenDeath.src = "./assets/sudden death shuriken.png";
     imgSuddenDeath.addEventListener('click', (event) => {
-        console.log("sudden death")
+        shurikenDiv.className += " none";
+        addSuddenDeathFight();
     })
 
     inject1v1.appendChild(imgSuddenDeath);
