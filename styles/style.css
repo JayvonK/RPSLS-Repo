@@ -121,8 +121,37 @@ body {
 }
 
 .vs {
-    position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.resultScreen {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.exitBtn {
+    top: 70%;
+    left: 55%;
+    z-index: 2;
+    border: none;
+    border-radius: 100px;
+    width: 406px;
+    height: 112px;
+    font-size: 48px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(140,140,140,1) 100%);
+}
+
+.continueBtn {
+    
 }
