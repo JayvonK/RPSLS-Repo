@@ -88,9 +88,9 @@ function FT3Winner(winnerName, choice1, choice2) {
     winnerTxt.className = "imPerfect white absolute winnerTxt";
     winnerTxt.innerText = winnerName + " wins";
 
-    // let winnerTxt2 = document.createElement("p");
-    // winnerTxt2.className = "winnerTxt2 firaCode absolute white";
-    // winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, ${winnerName} wins round ${p1Point + p2Point + 1}`;
+    let winnerTxt2 = document.createElement("p");
+    winnerTxt2.className = "winnerTxt2 firaCode absolute white";
+    winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, ${winnerName} wins round ${p1Point + p2Point + 1}`;
 
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
@@ -121,12 +121,10 @@ function FT3Winner(winnerName, choice1, choice2) {
     })
 
 
-
     resultDiv.appendChild(winnerBg);
     resultDiv.appendChild(winnerTxt);
+    resultDiv.appendChild(winnerTxt2);
     resultDiv.appendChild(exitBtn);
-
-
 }
 
 
@@ -361,7 +359,7 @@ function displayFT3Winner(choice1, choice2) {
             break;
     }
 
-    if (p1Point === 3) {
+    if (p1Point === 3 || p2Point === 3) {
         let restartBtn = document.createElement("button");
         restartBtn.className = "absolute restartBtn imPerfect";
         restartBtn.innerText = "restart";
@@ -374,32 +372,6 @@ function displayFT3Winner(choice1, choice2) {
             p2Point = 0;
             addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
         })
-
-        let winnerTxt2 = document.createElement("p");
-        winnerTxt2.className = "winnerTxt2 firaCode absolute white";
-        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, Samurai 1 wins! Samurai 2 needs to train more`;
-
-        resultDiv.appendChild(winnerTxt2);
-        resultDiv.appendChild(restartBtn);
-    } else if (p2Point === 3) {
-        let restartBtn = document.createElement("button");
-        restartBtn.className = "absolute restartBtn imPerfect";
-        restartBtn.innerText = "restart";
-        restartBtn.addEventListener('click', (event) => {
-            resultDiv.innerHTML = "";
-            resultDiv.className += " none";
-            fightDiv.innerHTML = "";
-            body.className = "bodyBg1 overflowX";
-            p1Point = 0;
-            p2Point = 0;
-            addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
-        })
-
-        let winnerTxt2 = document.createElement("p");
-        winnerTxt2.className = "winnerTxt2 firaCode absolute white";
-        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, Samurai 2 wins! Samurai 1 needs to train more`;
-
-        resultDiv.appendChild(winnerTxt2);
         resultDiv.appendChild(restartBtn);
     } else {
         let contnueBtn = document.createElement("button");
