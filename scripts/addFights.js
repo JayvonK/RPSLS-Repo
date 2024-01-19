@@ -30,16 +30,22 @@ function addSuddenDeathFight() {
     scissorsImg.src = "./assets/scissors icon.png";
     scissorsImg.alt = "img of scissors";
     scissorsImg.addEventListener('click', (event) => {
-        p1Choice = "paper";
+        p1Choice = "scissors";
     })
 
     let lizzardImg = document.createElement("img");
     lizzardImg.src = "./assets/lizard icon.png";
     lizzardImg.alt = "img of lizzard";
+    lizzardImg.addEventListener('click', (event) => {
+        p1Choice = "lizzard";
+    })
 
     let spockImg = document.createElement("img");
     spockImg.src = "./assets/spock icon.png";
     spockImg.alt = "img of spock";
+    spockImg.addEventListener('click', (event) => {
+        p1Choice = "spock";
+    })
 
     p1choices.appendChild(rockImg);
     p1choices.appendChild(paperImg);
