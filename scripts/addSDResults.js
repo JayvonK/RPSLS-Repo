@@ -144,6 +144,62 @@ function FT3Winner(winnerName, choice1, choice2) {
     resultDiv.appendChild(exitBtn);
 }
 
+function FT5Winner(winnerName, choice1, choice2) {
+    body.className = "bodyBg1 overflow";
+
+    resultDiv.className = "resultScreen absolute";
+    let winnerBg = document.createElement("img");
+    winnerBg.className = "winnerBg";
+    winnerBg.src = "./assets/resultscreenbg.png";
+    winnerBg.alt = "background screen";
+
+    let winnerTxt = document.createElement("h1");
+    winnerTxt.className = "imPerfect white absolute winnerTxt";
+    winnerTxt.innerText = winnerName + " wins";
+
+    let winnerTxt2 = document.createElement("p");
+    winnerTxt2.className = "winnerTxt2 firaCode absolute white";
+
+    if(AITrue){
+        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Supreme AI chose to battle with ${choice2}, as a result, ${winnerName} wins round ${p1Point + p2Point + 1}`;
+    }else {
+        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, ${winnerName} wins round ${p1Point + p2Point + 1}`;
+    }
+    
+
+    let exitBtn = document.createElement("button");
+    exitBtn.className = "absolute exitBtn imPerfect";
+    exitBtn.innerText = "exit";
+    exitBtn.addEventListener("click", (event) => {
+        resultDiv.innerHTML = "";
+        resultDiv.className += " none";
+        fightDiv.className += " none";
+        body.className = "bodyBg1 overflowX";
+        shurikenDiv.className = "container-fluid lotus shurikenDiv";
+        playCol.className = "col centerCol";
+        modeCol.className = "col centerCol";
+        howToPlayCol.className = "col centerCol";
+        inject1v1.className += " none";
+        injectAI.className += " none";
+        fT3Col.className += " none";
+        fT5Col.className += " none";
+        suddenDeathCol.className += " none";
+        inject1v1.innerHTML = "";
+        injectAI.innerHTML = "";
+        fT3Col.innerHTML = "";
+        fT5Col.innerHTML = "";
+        suddenDeathCol.innerHTML = "";
+        fightDiv.innerHTML = "";
+        p1Point = 0;
+        p2Point = 0;
+    });
+
+    resultDiv.appendChild(winnerBg);
+    resultDiv.appendChild(winnerTxt);
+    resultDiv.appendChild(winnerTxt2);
+    resultDiv.appendChild(exitBtn);
+}
+
 function TieSD(choice1, choice2) {
     body.className = "bodyBg1 overflow";
 
@@ -259,6 +315,68 @@ function TieFT3(choice1, choice2) {
         fightDiv.innerHTML = "";
         body.className = "bodyBg1 overflowX";
         addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
+    });
+
+    resultDiv.appendChild(contnueBtn);
+    resultDiv.appendChild(winnerBg);
+    resultDiv.appendChild(winnerTxt);
+    resultDiv.appendChild(winnerTxt2);
+    resultDiv.appendChild(exitBtn);
+}
+
+function TieFT5(choice1, choice2) {
+    body.className = "bodyBg1 overflow";
+
+    resultDiv.className = "resultScreen absolute";
+    let winnerBg = document.createElement("img");
+    winnerBg.className = "winnerBg";
+    winnerBg.src = "./assets/resultscreenbg.png";
+    winnerBg.alt = "background screen";
+
+    let winnerTxt = document.createElement("h1");
+    winnerTxt.className = "imPerfect white absolute winnerTxt";
+    winnerTxt.innerText = "A draw!";
+
+    let winnerTxt2 = document.createElement("p");
+    winnerTxt2.className = "winnerTxt2 firaCode absolute white";
+    winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, both Samurais have come to a draw`;
+
+    let exitBtn = document.createElement("button");
+    exitBtn.className = "absolute exitBtn imPerfect";
+    exitBtn.innerText = "exit";
+    exitBtn.addEventListener("click", (event) => {
+        resultDiv.innerHTML = "";
+        resultDiv.className += " none";
+        fightDiv.className += " none";
+        body.className = "bodyBg1 overflowX";
+        shurikenDiv.className = "container-fluid lotus shurikenDiv";
+        playCol.className = "col centerCol";
+        modeCol.className = "col centerCol";
+        howToPlayCol.className = "col centerCol";
+        inject1v1.className += " none";
+        injectAI.className += " none";
+        fT3Col.className += " none";
+        fT5Col.className += " none";
+        suddenDeathCol.className += " none";
+        inject1v1.innerHTML = "";
+        injectAI.innerHTML = "";
+        fT3Col.innerHTML = "";
+        fT5Col.innerHTML = "";
+        suddenDeathCol.innerHTML = "";
+        fightDiv.innerHTML = "";
+        p1Point = 0;
+        p2Point = 0;
+    });
+
+    let contnueBtn = document.createElement("button");
+    contnueBtn.className = "absolute restartBtn imPerfect";
+    contnueBtn.innerText = "continue";
+    contnueBtn.addEventListener("click", (event) => {
+        resultDiv.innerHTML = "";
+        resultDiv.className += " none";
+        fightDiv.innerHTML = "";
+        body.className = "bodyBg1 overflowX";
+        addFT5Fight(p1Point, p2Point, "dont cheat", "dont cheat");
     });
 
     resultDiv.appendChild(contnueBtn);
@@ -624,29 +742,29 @@ function displayFT3Winner(choice1, choice2) {
             case "rock":
                 switch (choice2) {
                     case "rock":
-                        TieFT3(choice1, choice2);
+                        TieFT5(choice1, choice2);
                         break;
                     case "paper":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "scissors":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "lizzard":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "spock":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
@@ -655,30 +773,30 @@ function displayFT3Winner(choice1, choice2) {
             case "paper":
                 switch (choice2) {
                     case "rock":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "paper":
-                        TieFT3(choice1, choice2);
+                        TieFT5(choice1, choice2);
                         break;
                     case "scissors":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "lizzard":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "spock":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                 }
@@ -687,28 +805,28 @@ function displayFT3Winner(choice1, choice2) {
                 switch (choice2) {
                     case "rock":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "paper":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "scissors":
-                        TieFT3(choice1, choice2);
+                        TieFT5(choice1, choice2);
                         break;
                     case "lizzard":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "spock":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
@@ -718,29 +836,29 @@ function displayFT3Winner(choice1, choice2) {
                 switch (choice2) {
                     case "rock":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "paper":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "scissors":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "lizzard":
-                        TieFT3(choice1, choice2);
+                        TieFT5(choice1, choice2);
                         break;
                     case "spock":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                 }
@@ -748,31 +866,31 @@ function displayFT3Winner(choice1, choice2) {
             case "spock":
                 switch (choice2) {
                     case "rock":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "paper":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "scissors":
-                        FT3Winner("Samurai 1", choice1, choice2);
+                        FT5Winner("Samurai 1", choice1, choice2);
                         p1Point++;
                         break;
                     case "lizzard":
                         if (AITrue) {
-                            FT3Winner("Supreme AI", choice1, choice2);
+                            FT5Winner("Supreme AI", choice1, choice2);
                         } else {
-                            FT3Winner("Samurai 2", choice1, choice2);
+                            FT5Winner("Samurai 2", choice1, choice2);
                         }
                         p2Point++;
                         break;
                     case "spock":
-                        TieFT3(choice1, choice2);
+                        TieFT5(choice1, choice2);
                         break;
                 }
                 break;

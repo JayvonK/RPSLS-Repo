@@ -1,5 +1,5 @@
 import { fT3Col, fT5Col, suddenDeathCol } from "./app.js";
-import { addSuddenDeathFight, addFT3Fight } from "./addFights.js";
+import { addSuddenDeathFight, addFT3Fight, addFT5Fight } from "./addFights.js";
 
 
 let shurikenDiv = document.getElementById("shurikenDiv");
@@ -39,7 +39,7 @@ function addFT5()
     imgFT5.src = "./assets/FT5 shuriken.png";
     imgFT5.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
-        console.log("first to 5");
+        addFT5Fight(0, 0, "dont cheat", "dont cheat");
     })
 
     fT5Col.appendChild(imgFT5);
