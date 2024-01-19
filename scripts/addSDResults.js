@@ -3,6 +3,7 @@ let resultDiv = document.getElementById("resultDiv");
 
 function SDWinner(winnerName, choice1, choice2)
 {
+    resultDiv.className = "resultScreen absolute";
     let winnerBg = document.createElement("img");
     winnerBg.className = "winnerBg";
     winnerBg.src = "./assets/resultscreenbg.png";
