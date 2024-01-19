@@ -475,7 +475,7 @@ function addFT3Fight(point1, point2, message1, message2) {
             dontCheat1.innerText = "You didnt choose an option";
             dontCheat1.className = "imPerfect txtCenter red message";
         } else {
-            if (p1Point < 2 && p2Point < 2) {
+            if (p1Point === 3 || p2Point === 3) {
                 fightDiv.innerHTML = "";
                 displayFT3Winner(p1Choice, p2Choice);
                 addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
@@ -483,8 +483,8 @@ function addFT3Fight(point1, point2, message1, message2) {
                 p2Choice = "";
             } else {
                 fightDiv.innerHTML = "";
-                displaySDWinner(p1Choice, p2Choice);
-                addSuddenDeathFight(p1Point, p2Point, "dont cheat", "dont cheat");
+                displayFT3Winner(p1Choice, p2Choice);
+                addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
                 p1Choice = "";
                 p2Choice = "";
             }
