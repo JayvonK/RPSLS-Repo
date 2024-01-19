@@ -40,6 +40,7 @@ function displaySDWinner(choice1, choice2) {
                 case "rock":
                     break;
                 case "paper":
+                    SDWinner("samurai 2", choice1, choice2);
                     break;
                 case "scissors":
                     break;
@@ -107,3 +108,5 @@ function displaySDWinner(choice1, choice2) {
             break;
     }
 }
+
+export { displaySDWinner }

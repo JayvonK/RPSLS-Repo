@@ -1,4 +1,4 @@
-
+import { displaySDWinner } from "./addSDResults.js";
 let fightDiv = document.getElementById("fightDiv");
 
 let p1Choice = "";
@@ -211,7 +211,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         dontCheat1.innerText = "You didnt choose an option";
         dontCheat1.className = "imPerfect txtCenter red message";
     } else {
-
+        displaySDWinner(p1Choice, p2Choice);
     }
     })
 
