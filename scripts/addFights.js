@@ -14,8 +14,7 @@ function addSuddenDeathFight() {
     let rockImg = document.createElement("img");
     rockImg.src = "./assets/rock icon.png";
     rockImg.alt = "img of rock";
-    rockImg.addEventListener('click', (event) => 
-    {
+    rockImg.addEventListener('click', (event) => {
         p1Choice = "rock";
     })
 
