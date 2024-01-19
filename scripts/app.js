@@ -8,6 +8,8 @@ let volume = document.getElementById("volume");
 let playCol = document.getElementById("playCol");
 let injectRow = document.getElementById("injectRow");
 let howToPlayCol = document.getElementById("howToPlayCol");
+let fT3Col = document.getElementById("ft3Col");
+let fT5Col = document.getElementById("ft5Col");
 let modeCol = document.getElementById("modeCol");
 let p1Choice = "";
 let p2Choice = "";
@@ -42,4 +44,4 @@ playBtn.addEventListener('click', (event) => {
 
 
 
-export { playCol, p1Choice, p2Choice, body, injectRow, howToPlayCol, modeCol }
+export { playCol, p1Choice, p2Choice, body, injectRow, howToPlayCol, modeCol, fT3Col, fT5Col }

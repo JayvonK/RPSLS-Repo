@@ -1,21 +1,21 @@
-import { playCol, injectRow } from "./app.js";
+import { fT3Col, fT5Col } from "./app.js";
 import { inject1v1, injectAI } from "./addVersus.js";
 import { addSuddenDeathFight } from "./addFights.js";
+
 
 let shurikenDiv = document.getElementById("shurikenDiv");
 
 function addFT3()
 {
-    playCol.className += " none";
-    let col = document.createElement("col");
+    fT3Col.className = "col";
     let imgFT3 = document.createElement("img");
     imgFT3.src = "./assets/FT3 shuriken.png";
+    imgFT3.classname = "cursor";
     imgFT3.addEventListener('click', (event) => {
         console.log("first to 3")
     })
 
-    col.appendChild(imgFT3);
-    injectRow.appendChild(col);
+    fT3Col.appendChild(imgFT3);
 }
 
 function addSuddenDeath()

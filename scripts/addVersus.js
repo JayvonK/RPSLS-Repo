@@ -11,8 +11,8 @@ function addVersus () {
     img1v1.className = "cursor";
     img1v1.addEventListener('click', (event) => {
         console.log("1v1 working");
-        img1v1.className = "none";
-        imgAI.className = "none";
+        inject1v1.className += " none";
+        injectAI.className += " none";
         addFT3();
         addSuddenDeath();
         addFT5();
@@ -24,7 +24,6 @@ function addVersus () {
     imgAI.className = "cursor";
     imgAI.addEventListener('click', (event) => {
         console.log("1v1 working");
-        imgAI.class = "none";
     })
     injectAI.appendChild(imgAI);
 }
