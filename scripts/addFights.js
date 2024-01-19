@@ -1,5 +1,4 @@
 
-
 let fightDiv = document.getElementById("fightDiv");
 
 let p1Choice = "";
@@ -16,6 +15,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let rockImg = document.createElement("img");
     rockImg.src = "./assets/rock icon.png";
     rockImg.alt = "img of rock";
+    rockImg.className = "cursor";
     rockImg.addEventListener('click', (event) => {
         p1Choice = "rock";
     })
@@ -23,6 +23,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let paperImg = document.createElement("img");
     paperImg.src = "./assets/paper icon.png";
     paperImg.alt = "img of paper";
+    paperImg.className = "cursor";
     paperImg.addEventListener('click', (event) => {
         p1Choice = "paper";
     })
@@ -30,6 +31,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let scissorsImg = document.createElement("img");
     scissorsImg.src = "./assets/scissors icon.png";
     scissorsImg.alt = "img of scissors";
+    scissorsImg.className = "cursor";
     scissorsImg.addEventListener('click', (event) => {
         p1Choice = "scissors";
     })
@@ -37,6 +39,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let lizzardImg = document.createElement("img");
     lizzardImg.src = "./assets/lizard icon.png";
     lizzardImg.alt = "img of lizzard";
+    lizzardImg.className = "cursor";
     lizzardImg.addEventListener('click', (event) => {
         p1Choice = "lizzard";
     })
@@ -44,6 +47,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let spockImg = document.createElement("img");
     spockImg.src = "./assets/spock icon.png";
     spockImg.alt = "img of spock";
+    spockImg.className = "cursor";
     spockImg.addEventListener('click', (event) => {
         p1Choice = "spock";
     })
@@ -102,6 +106,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let rockImg2 = document.createElement("img");
     rockImg2.src = "./assets/rock icon.png";
     rockImg2.alt = "img of rock";
+    rockImg2.className = "cursor";
     rockImg2.addEventListener('click', (event) => {
         p2Choice = "rock";
     })
@@ -109,6 +114,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let paperImg2 = document.createElement("img");
     paperImg2.src = "./assets/paper icon.png";
     paperImg2.alt = "img of paper";
+    paperImg2.className = "cursor";
     paperImg2.addEventListener('click', (event) => {
         p2Choice = "paper";
     })
@@ -116,6 +122,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let scissorsImg2 = document.createElement("img");
     scissorsImg2.src = "./assets/scissors icon.png";
     scissorsImg2.alt = "img of scissors";
+    scissorsImg2.className = "cursor";
     scissorsImg2.addEventListener('click', (event) => {
         p2Choice = "scissors";
     })
@@ -123,6 +130,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let lizzardImg2 = document.createElement("img");
     lizzardImg2.src = "./assets/lizard icon.png";
     lizzardImg2.alt = "img of lizzard";
+    lizzardImg2.className = "cursor";
     lizzardImg2.addEventListener('click', (event) => {
         p2Choice = "lizzard";
     })
@@ -130,6 +138,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     let spockImg2 = document.createElement("img");
     spockImg2.src = "./assets/spock icon.png";
     spockImg2.alt = "img of spock";
+    spockImg2.className = "cursor";
     spockImg2.addEventListener('click', (event) => {
         p2Choice = "spock";
     })
@@ -202,7 +211,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         dontCheat1.innerText = "You didnt choose an option";
         dontCheat1.className = "imPerfect txtCenter red message";
     } else {
-        
+
     }
     })
 

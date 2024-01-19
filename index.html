@@ -33,7 +33,7 @@
 
     </div>
 
-    <div id="shurikenDiv" class="container-fluid lotus">
+    <div id="shurikenDiv" class="container-fluid lotus none">
         <div class="row">
             <div id="inject1v1" class="col">
                 <!-- Button trigger modal -->
@@ -80,16 +80,7 @@
 
     <div id="fightDiv" class="container-fluid lotus">
     
-    </div>
-
-    <div id="resultDiv" class="resultScreen absolute none">
-        <img src="./assets/resultscreenbg.png" alt="">
-        <button class=" absolute exitBtn imPerfect">EXiT</button>
-        <button class="absolute restartBtn imPerfect">Restart</button>
-    </div>
-
-
-    <!-- <div class="row">
+    <div class="row">
             <div class="col samurai1Padding">
                 <h1 class="imPerfect white txtCenter score">0/1</h1>
                 <div class="center">
@@ -129,10 +120,21 @@
                 
                 <p id="p2Message" class="imPerfect txtCenter yellow message">Dont cheat</p>
             </div>
-        </div> -->
+        </div>
 
-        <!-- <button id="fightBtn" class="fightBtn imPerfect white">Fight</button>
-        <h1 class="txtCenter white imPerfect absolute vs">vs</h1> -->
+        <button id="fightBtn" class="fightBtn imPerfect white">Fight</button>
+        <h1 class="txtCenter white imPerfect absolute vs">vs</h1>
+    </div>
+
+    <div id="resultDiv" class="resultScreen absolute">
+        <img class="winnerBg" src="./assets/resultscreenbg.png" alt="">
+        <h1 class="imPerfect white absolute winnerTxt">Samurai 1 Wins</h1>
+        <p class="winnerTxt2 firaCode absolute white">Samurai 1 chose to battle with rock and Samurai 2 chose to battle with scissors, as a result, Samurai 1 wins</p>
+        <button class=" absolute exitBtn imPerfect">EXiT</button>
+        <button class="absolute restartBtn imPerfect">Restart</button>
+    </div>
+
+
 
 
 

@@ -8,23 +8,28 @@
     src: url(../assets/FiraCode-Regular.ttf);
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .bodyBg1 {
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 9, 64, 1) 100%);
 }
 
-.lotus {
+.winnerBg {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* .lotus {
     background-image: url(../assets/undefined\ -\ Imgur.gif);
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 
 .red {
     color: red;
+}
+
+.cursor:hover {
+    cursor: pointer;
 }
 
 .navbarHeight {
@@ -125,6 +130,24 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.winnerTxt {
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 96px;
+    width: 1200px;
+    text-align: center;
+}
+
+.winnerTxt2 {
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    width: 940px;
+    text-align: center;
+}
+
 
 .vs {
     top: 40%;
@@ -151,7 +174,7 @@ body {
     justify-content: space-between;
 }
 
-.optionsDiv{
+.optionsDiv {
     width: 30.5vw;
 }
 
@@ -180,8 +203,8 @@ body {
     width: 406px;
     height: 112px;
     font-size: 48px;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(140,140,140,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(140, 140, 140, 1) 100%);
 }
 
 .restartBtn {
@@ -193,8 +216,8 @@ body {
     width: 406px;
     height: 112px;
     font-size: 48px;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(140,140,140,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(140, 140, 140, 1) 100%);
 }
 
 .score {
