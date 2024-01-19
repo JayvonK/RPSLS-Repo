@@ -86,7 +86,7 @@ body {
 }
 
 .samuraiSize {
-    width: 40%;
+    width: 50%;
 }
 
 .center {
@@ -96,6 +96,10 @@ body {
 
 .samurai1Padding {
     padding-right: 15%;
+}
+
+.samurai2Padding {
+    padding-left: 15%;
 }
 
 .cyan {
