@@ -4,8 +4,11 @@ let injectAI = document.getElementById("injectAI");
 let inject1v1 = document.getElementById("inject1v1");
 
 function addVersus () {
+    inject1v1.className = "col";
+    injectAI.className = "col";
     let img1v1 = document.createElement("img");
     img1v1.src = "./assets/1v1 Shuriken.png";
+    img1v1.className = "cursor";
     img1v1.addEventListener('click', (event) => {
         console.log("1v1 working");
         img1v1.className = "none";
@@ -18,6 +21,7 @@ function addVersus () {
 
     let imgAI = document.createElement("img");
     imgAI.src = "./assets/AI shuriken.png";
+    imgAI.className = "cursor";
     imgAI.addEventListener('click', (event) => {
         console.log("1v1 working");
         imgAI.class = "none";
