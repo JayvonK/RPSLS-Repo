@@ -239,4 +239,4 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
 
 
 
-export {addSuddenDeathFight}
+export {addSuddenDeathFight, fightDiv}
