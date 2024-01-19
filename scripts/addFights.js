@@ -1,5 +1,6 @@
-import { displaySDWinner } from "./addSDResults.js";
+import { displaySDWinner, p1Point, p2Point } from "./addSDResults.js";
 let fightDiv = document.getElementById("fightDiv");
+
 
 let p1Choice = "";
 let p2Choice = "";
@@ -18,6 +19,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     rockImg.className = "cursor";
     rockImg.addEventListener('click', (event) => {
         p1Choice = "rock";
+        dontCheat1.innerText = "ready to battle";
     })
 
     let paperImg = document.createElement("img");
@@ -26,6 +28,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     paperImg.className = "cursor";
     paperImg.addEventListener('click', (event) => {
         p1Choice = "paper";
+        dontCheat1.innerText = "ready to battle";
     })
 
     let scissorsImg = document.createElement("img");
@@ -34,6 +37,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     scissorsImg.className = "cursor";
     scissorsImg.addEventListener('click', (event) => {
         p1Choice = "scissors";
+        dontCheat1.innerText = "ready to battle";
     })
 
     let lizzardImg = document.createElement("img");
@@ -42,6 +46,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     lizzardImg.className = "cursor";
     lizzardImg.addEventListener('click', (event) => {
         p1Choice = "lizzard";
+        dontCheat1.innerText = "ready to battle";
     })
 
     let spockImg = document.createElement("img");
@@ -50,6 +55,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     spockImg.className = "cursor";
     spockImg.addEventListener('click', (event) => {
         p1Choice = "spock";
+        dontCheat1.innerText = "ready to battle";
     })
 
     p1choices.appendChild(rockImg);
@@ -109,6 +115,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     rockImg2.className = "cursor";
     rockImg2.addEventListener('click', (event) => {
         p2Choice = "rock";
+        dontCheat2.innerText = "ready to battle";
     })
 
     let paperImg2 = document.createElement("img");
@@ -117,6 +124,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     paperImg2.className = "cursor";
     paperImg2.addEventListener('click', (event) => {
         p2Choice = "paper";
+        dontCheat2.innerText = "ready to battle";
     })
 
     let scissorsImg2 = document.createElement("img");
@@ -125,6 +133,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     scissorsImg2.className = "cursor";
     scissorsImg2.addEventListener('click', (event) => {
         p2Choice = "scissors";
+        dontCheat2.innerText = "ready to battle";
     })
 
     let lizzardImg2 = document.createElement("img");
@@ -133,6 +142,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     lizzardImg2.className = "cursor";
     lizzardImg2.addEventListener('click', (event) => {
         p2Choice = "lizzard";
+        dontCheat2.innerText = "ready to battle";
     })
 
     let spockImg2 = document.createElement("img");
@@ -141,6 +151,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     spockImg2.className = "cursor";
     spockImg2.addEventListener('click', (event) => {
         p2Choice = "spock";
+        dontCheat2.innerText = "ready to battle";
     })
 
     p2choices.appendChild(rockImg2);
@@ -211,7 +222,9 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         dontCheat1.innerText = "You didnt choose an option";
         dontCheat1.className = "imPerfect txtCenter red message";
     } else {
+        fightDiv.innerHTML = "";
         displaySDWinner(p1Choice, p2Choice);
+        addSuddenDeathFight(p1Point, p2Point, "dont cheat", "dont cheat");
     }
     })
 

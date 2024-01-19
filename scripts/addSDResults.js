@@ -1,4 +1,7 @@
 
+let p1Point = 0;
+let p2Point = 0;
+
 let resultDiv = document.getElementById("resultDiv");
 
 function SDWinner(winnerName, choice1, choice2)
@@ -42,6 +45,7 @@ function displaySDWinner(choice1, choice2) {
                     break;
                 case "paper":
                     SDWinner("samurai 2", choice1, choice2);
+                    p2Point++;
                     break;
                 case "scissors":
                     break;
@@ -110,4 +114,4 @@ function displaySDWinner(choice1, choice2) {
     }
 }
 
-export { displaySDWinner }
+export { displaySDWinner, p1Point, p2Point }

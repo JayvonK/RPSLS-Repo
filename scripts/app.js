@@ -1,6 +1,7 @@
 import { musicPlay, stopMusic, music } from "./music.js";
 import { addVersus } from "./addVersus.js";
 
+let body = document.getElementById("body");
 let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");
 let howToPlayBtn = document.getElementById("howToPlayBtn");
@@ -115,4 +116,4 @@ playBtn.addEventListener('click', (event) => {
 
 
 
-export { playCol, p1Choice, p2Choice }
+export { playCol, p1Choice, p2Choice, body }
