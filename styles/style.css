@@ -19,7 +19,7 @@ body {
 
 .lotus {
     background-image: url(../assets/undefined\ -\ Imgur.gif);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
