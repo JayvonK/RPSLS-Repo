@@ -8,6 +8,10 @@
     src: url(../assets/FiraCode-Regular.ttf);
 }
 
+.overflow {
+    overflow: hidden;
+}
+
 .bodyBg1 {
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 9, 64, 1) 100%);
