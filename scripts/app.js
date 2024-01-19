@@ -8,6 +8,7 @@ let howToPlayBtn = document.getElementById("howToPlayBtn");
 let volume = document.getElementById("volume");
 let modal = document.getElementById("btnModal");
 let playCol = document.getElementById("playCol");
+let injectRow = document.getElementById("injectRow");
 // let p1Rock = document.getElementById("p1Rock");
 // let p1Paper = document.getElementById("p1Paper");
 // let p1Scissors = document.getElementById("p1Scissors");
@@ -116,4 +117,4 @@ playBtn.addEventListener('click', (event) => {
 
 
 
-export { playCol, p1Choice, p2Choice, body }
+export { playCol, p1Choice, p2Choice, body, injectRow }

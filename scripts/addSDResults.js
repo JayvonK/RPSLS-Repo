@@ -1,5 +1,6 @@
 import { body } from "./app.js";
 import { addSuddenDeathFight, fightDiv } from "./addFights.js";
+import { shurikenDiv } from "./addGameModes.js";
 
 let p1Point = 0;
 let p2Point = 0;
@@ -27,6 +28,16 @@ function SDWinner(winnerName, choice1, choice2)
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
+    exitBtn.addEventListener('click', (event) => {
+        resultDiv.innerHTML = "";
+        resultDiv.className += " none";
+        fightDiv.className += " none";
+        body.className = "bodyBg1";
+        p1Point = 0;
+        p2Point = 0;
+        shurikenDiv
+    })
+    
 
     let restartBtn = document.createElement("button");
     restartBtn.className = "absolute restartBtn imPerfect";

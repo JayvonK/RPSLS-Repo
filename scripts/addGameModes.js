@@ -1,24 +1,27 @@
-import { playCol } from "./app.js";
+import { playCol, injectRow } from "./app.js";
 import { inject1v1, injectAI } from "./addVersus.js";
-
 import { addSuddenDeathFight } from "./addFights.js";
 
 let shurikenDiv = document.getElementById("shurikenDiv");
 
 function addFT3()
 {
-    playCol.className = "col";
+    playCol.className += " none";
+    let col = document.createElement("col");
     let imgFT3 = document.createElement("img");
     imgFT3.src = "./assets/FT3 shuriken.png";
     imgFT3.addEventListener('click', (event) => {
         console.log("first to 3")
     })
 
-    playCol.appendChild(imgFT3);
+    col.appendChild(imgFT3);
+    injectRow.appendChild(col);
 }
 
 function addSuddenDeath()
 {
+    let col = document.createElement("col");
+    col.className = "col";
     let imgSuddenDeath = document.createElement("img");
     imgSuddenDeath.src = "./assets/sudden death shuriken.png";
     imgSuddenDeath.addEventListener('click', (event) => {
@@ -26,7 +29,7 @@ function addSuddenDeath()
         addSuddenDeathFight(0, 0, "dont cheat", "dont cheat");
     })
 
-    inject1v1.appendChild(imgSuddenDeath);
+    col.appendChild(imgSuddenDeath);
 }
 
 function addFT5() 
@@ -40,4 +43,4 @@ function addFT5()
     injectAI.appendChild(imgFT5)
 }
 
-export { addFT3, addSuddenDeath, addFT5};
+export { addFT3, addSuddenDeath, addFT5, shurikenDiv};

@@ -7,6 +7,8 @@ let p2Choice = "";
 
 
 function addSuddenDeathFight(point1, point2, message1, message2) {
+    fightDiv.className = "container-fluid lotus";
+
     let p1ChoicesOuterDiv = document.createElement("div");
     p1ChoicesOuterDiv.className = "center"
 
