@@ -184,32 +184,33 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     row.appendChild(p2Col);
     
     let fightBtn = document.createElement("div");
-    fightBtn.className = "fightBtn imPerfect white";
-    fightBtn.innerText = "Fight";
+    fightBtn.className = "fightBtn imPerfect white txtCenter";
+    fightBtn.textContent = "Fight";
     fightBtn.addEventListener('click', (event) => {
      if(p1Choice === "" && p2Choice === "")
     {
         dontCheat1.innerText = "You didnt choose an option";
-        dontCheat1.className = "imPerfect txtCenter red message"
+        dontCheat1.className = "imPerfect txtCenter red message";
         dontCheat2.innerText = "You didnt choose an option";
-        dontCheat2.className = "imPerfect txtCenter red message"
+        dontCheat2.className = "imPerfect txtCenter red message";
     } else if (p2Choice === "")
     {
         dontCheat2.innerText = "You didnt choose an option";
-        dontCheat2.className = "imPerfect txtCenter red message"
+        dontCheat2.className = "imPerfect txtCenter red message";
     } else if (p1Choice === "")
     {
         dontCheat1.innerText = "You didnt choose an option";
-        dontCheat1.className = "imPerfect txtCenter red message"
+        dontCheat1.className = "imPerfect txtCenter red message";
     }
     })
 
+    let vs = document.createElement("h1");
+    vs.className = "txtCenter white imPerfect absolute vs";
+    vs.textContent = "vs";
 
     fightDiv.appendChild(row);
     fightDiv.appendChild(fightBtn);
-
-    
-
+    fightDiv.appendChild(vs);
 }
 
 
