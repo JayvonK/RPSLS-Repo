@@ -20,10 +20,7 @@ let playCol = document.getElementById("playCol");
 // let p2Scissors = document.getElementById("p2Scissors");
 // let p2Lizzard = document.getElementById("p2Lizzard");
 // let p2Spock = document.getElementById("p2Spock");
-let fightBtn = document.getElementById("fightBtn");
-
 let p1Choice = "";
-
 let p2Choice = "";
 
 music.volume = 0.3;
@@ -119,4 +116,4 @@ playBtn.addEventListener('click', (event) => {
 
 
 
-export { playCol }
+export { playCol, p1Choice, p2Choice }
