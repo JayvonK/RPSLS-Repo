@@ -45,9 +45,9 @@ modeBtn.addEventListener('click', () => {
     } else {
         lightMode = true;
     }
-    
+
 })
 
 
 
-export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col }
+export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, playBtn, modeBtn }
