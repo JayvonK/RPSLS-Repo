@@ -7,11 +7,9 @@ let modeBtn = document.getElementById("modeBtn");
 let volume = document.getElementById("volume");
 let playCol = document.getElementById("playCol");
 let injectRow = document.getElementById("injectRow");
-let howToPlayCol = document.getElementById("howToPlayCol");
 let suddenDeathCol = document.getElementById("suddenDeathCol");
 let fT3Col = document.getElementById("fT3Col");
 let fT5Col = document.getElementById("fT5Col");
-let modeCol = document.getElementById("modeCol");
 let p1Choice = "";
 let p2Choice = "";
 
@@ -37,12 +35,10 @@ volume.addEventListener('click', () => {
 })
 
 playBtn.addEventListener('click', (event) => {
-    howToPlayCol.className += " none";
-    modeCol.className += " none";
     playCol.className += " none";
     addVersus();
 })
 
 
 
-export { playCol, p1Choice, p2Choice, body, injectRow, howToPlayCol, modeCol, fT3Col, fT5Col, suddenDeathCol }
+export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, fT5Col, suddenDeathCol }

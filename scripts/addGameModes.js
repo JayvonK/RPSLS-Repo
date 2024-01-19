@@ -1,4 +1,4 @@
-import { fT3Col, fT5Col, suddenDeathCol } from "./app.js";
+import { fT3Col } from "./app.js";
 import { addSuddenDeathFight, addFT3Fight, addFT5Fight } from "./addFights.js";
 
 
@@ -20,7 +20,7 @@ function addFT3()
 
 function addSuddenDeath()
 {
-    suddenDeathCol.className = "col centerCol";
+    fT3Col.className = "col centerCol";
     let imgSuddenDeath = document.createElement("img");
     imgSuddenDeath.src = "./assets/sudden death shuriken.png";
     imgSuddenDeath.className = "cursor";
@@ -29,12 +29,12 @@ function addSuddenDeath()
         addSuddenDeathFight(0, 0, "dont cheat", "dont cheat");
     })
 
-    suddenDeathCol.appendChild(imgSuddenDeath);
+    fT3Col.appendChild(imgSuddenDeath);
 }
 
 function addFT5() 
 {
-    fT5Col.className = "col centerCol";
+    fT3Col.className = "col centerCol";
     let imgFT5 = document.createElement("img");
     imgFT5.src = "./assets/FT5 shuriken.png";
     imgFT5.addEventListener('click', (event) => {
@@ -42,7 +42,7 @@ function addFT5()
         addFT5Fight(0, 0, "dont cheat", "dont cheat");
     })
 
-    fT5Col.appendChild(imgFT5);
+    fT3Col.appendChild(imgFT5);
 }
 
 export { addFT3, addSuddenDeath, addFT5, shurikenDiv};

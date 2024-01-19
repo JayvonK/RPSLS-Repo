@@ -28,6 +28,12 @@
     align-items: center;
 }
 
+.centerCol1 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 .bodyBg1 {
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 9, 64, 1) 100%);
@@ -79,6 +85,8 @@
 
 .titleSize {
     font-size: 96px;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 .none {
@@ -109,6 +117,11 @@
 
 .samuraiSize {
     width: 50%;
+}
+
+.end {
+    display: flex;
+    justify-content: end;
 }
 
 .center {
