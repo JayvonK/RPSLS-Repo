@@ -1,6 +1,5 @@
 import { musicPlay, stopMusic, music } from "./music.js";
 import { addVersus } from "./addVersus.js";
-import { randomBool } from "./addFights.js";
 
 let playBtn = document.getElementById("playBtn");
 let modeBtn = document.getElementById("modeBtn");

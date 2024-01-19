@@ -1,7 +1,9 @@
-import { p1Choice, p2Choice } from "./app.js";
+
 
 let fightDiv = document.getElementById("fightDiv");
-let randomBool = false;
+
+let p1Choice = "";
+let p2Choice = "";
 
 
 function addSuddenDeathFight(point1, point2, message1, message2) {
@@ -180,10 +182,36 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
 
     row.appendChild(p1Col);
     row.appendChild(p2Col);
-
+    
+    let fightBtn = document.createElement("div");
+    fightBtn.className = "fightBtn imPerfect white";
+    fightBtn.innerText = "Fight";
+    fightBtn.addEventListener('click', (event) => {
+     if(p1Choice === "" && p2Choice === "")
+    {
+        dontCheat1.innerText = "You didnt choose an option";
+        dontCheat1.className = "imPerfect txtCenter red message"
+        dontCheat2.innerText = "You didnt choose an option";
+        dontCheat2.className = "imPerfect txtCenter red message"
+    } else if (p2Choice === "")
+    {
+        dontCheat2.innerText = "You didnt choose an option";
+        dontCheat2.className = "imPerfect txtCenter red message"
+    } else if (p1Choice === "")
+    {
+        dontCheat1.innerText = "You didnt choose an option";
+        dontCheat1.className = "imPerfect txtCenter red message"
+    }
+    })
 
 
     fightDiv.appendChild(row);
+    fightDiv.appendChild(fightBtn);
+
+    
+
 }
 
-export {addSuddenDeathFight, randomBool}
+
+
+export {addSuddenDeathFight}
