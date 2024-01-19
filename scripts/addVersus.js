@@ -21,7 +21,6 @@ function addVersus () {
     imgAI.addEventListener('click', (event) => {
         console.log("1v1 working");
         imgAI.class = "none";
-        
     })
     injectAI.appendChild(imgAI);
 }

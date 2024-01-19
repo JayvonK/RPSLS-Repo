@@ -14,7 +14,7 @@ function SDWinner(winnerName, choice1, choice2)
 
     let winnerTxt2 = document.createElement("p");
     winnerTxt2.className = "winnerTxt2 firaCode absolute white";
-    winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${scissors}, as a result, ${winnerName} wins`;
+    winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, ${winnerName} wins`;
 
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
