@@ -13,6 +13,7 @@ let p2Choice = "";
 music.volume = 0.3;
 
 
+
 volume.addEventListener('click', () => {
     console.log("click");
     console.log(volume.alt);

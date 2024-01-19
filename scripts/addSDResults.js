@@ -7,6 +7,23 @@ import { addSuddenDeathFight, fightDiv, addFT3Fight, addFT5Fight } from "./addFi
 import { shurikenDiv } from "./addGameModes.js";
 import { AITrue, inject1v1 } from "./addVersus.js";
 
+let home = document.getElementById("home");
+home.addEventListener('click', () => {
+        resultDiv.innerHTML = "";
+        resultDiv.className = "resultScreen absolute none";
+        fightDiv.className = " none";
+        body.className = "bodyBg1 overflowX";
+        shurikenDiv.className = "container-fluid lotus shurikenDiv";
+        playCol.className = "col centerCol";
+        fT3Col.className = "col none";
+        fT3Col.innerHTML = "";
+        inject1v1.innerHTML = "";
+        inject1v1.className = "col none";
+        fightDiv.innerHTML = "";
+        p1Point = 0;
+        p2Point = 0;
+})
+
 let p1Point = 0;
 let p2Point = 0;
 
@@ -34,7 +51,7 @@ function SDWinner(winnerName, choice1, choice2) {
         winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, ${winnerName} wins`;
     }
 
-
+    
 
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
@@ -49,7 +66,7 @@ function SDWinner(winnerName, choice1, choice2) {
         fT3Col.className += " none";
         fT3Col.innerHTML = "";
         inject1v1.innerHTML = "";
-        inject1v1.className = "col centerCol";
+        inject1v1.className += " none";
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
@@ -111,7 +128,7 @@ function FT3Winner(winnerName, choice1, choice2) {
         fT3Col.className += " none";
         fT3Col.innerHTML = "";
         inject1v1.innerHTML = "";
-        inject1v1.className = "col centerCol";
+        inject1v1.className += " none";
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
@@ -159,7 +176,7 @@ function FT5Winner(winnerName, choice1, choice2) {
         fT3Col.className += " none";
         fT3Col.innerHTML = "";
         inject1v1.innerHTML = "";
-        inject1v1.className = "col centerCol";
+        inject1v1.className += " none";
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
@@ -201,7 +218,7 @@ function TieSD(choice1, choice2) {
         fT3Col.className += " none";
         fT3Col.innerHTML = "";
         inject1v1.innerHTML = "";
-        inject1v1.className = "col centerCol";
+        inject1v1.className += " none";
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
@@ -255,7 +272,7 @@ function TieFT3(choice1, choice2) {
         fT3Col.className += " none";
         fT3Col.innerHTML = "";
         inject1v1.innerHTML = "";
-        inject1v1.className = "col centerCol";
+        inject1v1.className += " none";
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
@@ -309,7 +326,7 @@ function TieFT5(choice1, choice2) {
         fT3Col.className += " none";
         fT3Col.innerHTML = "";
         inject1v1.innerHTML = "";
-        inject1v1.className = "col centerCol";
+        inject1v1.className += " none";
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
