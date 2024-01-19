@@ -115,15 +115,17 @@ body {
     height: 86px;
     font-size: 48px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+
 .vs {
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 48px;
 }
 
 .resultScreen {
@@ -137,6 +139,31 @@ body {
 
 .absolute {
     position: absolute;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.optionsDiv{
+    width: 30.5vw;
+}
+
+.choose {
+    font-size: 48px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.message {
+    font-size: 24px;
+    padding-top: 70px;
+}
+
+.samurai {
+    font-size: 24px;
+    padding-top: 24px;
 }
 
 .exitBtn {
@@ -163,4 +190,10 @@ body {
     font-size: 48px;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(140,140,140,1) 100%);
+}
+
+.score {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 48px;
 }

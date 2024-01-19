@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div id="shurikenDiv" class="container-fluid lotus">
+    <div id="shurikenDiv" class="container-fluid lotus none">
         <div class="row">
             <div id="inject1v1" class="col">
                 <!-- Button trigger modal -->
@@ -58,13 +58,14 @@
                                     <li>Spock beats scissors and rock</li>
                                 </ol>
                                 <div class="row">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div id="playCol" class="col">
                 <img id="playBtn" src="./assets/Play Shuriken.png" alt="">
@@ -75,40 +76,46 @@
         </div>
     </div>
 
-    <div id="fightDiv" class="container-fluid">
+    <div id="fightDiv" class="container-fluid lotus">
         <div class="row">
             <div class="col samurai1Padding">
-                <h1 class="imPerfect white txtCenter">0/1</h1>
+                <h1 class="imPerfect white txtCenter score">0/1</h1>
                 <div class="center">
                     <img src="./assets/samurai 1.png" alt="" class="samuraiSize">
                 </div>
-                <p class="imPerfect txtCenter cyan">Samurai 1</p>
-                <h1 class="imPerfect cyan txtCenter">choose</h1>
+                <p class="imPerfect txtCenter cyan samurai">Samurai 1</p>
+                <h1 class="imPerfect cyan txtCenter choose">choose</h1>
                 <div class="center">
-                    <img id="p1Rock" src="./assets/rock icon.png" alt="">
-                    <img id="p1Paper" src="./assets/paper icon.png" alt="">
-                    <img id="p1Scissors" src="./assets/scissors icon.png" alt="">
-                    <img id="p1Lizzard" src="./assets/lizard icon.png" alt="">
-                    <img id="p1Spock" src="./assets/spock icon.png" alt="">
+                    <div class="between optionsDiv">
+                        <img id="p1Rock" src="./assets/rock icon.png" alt="">
+                        <img id="p1Paper" src="./assets/paper icon.png" alt="">
+                        <img id="p1Scissors" src="./assets/scissors icon.png" alt="">
+                        <img id="p1Lizzard" src="./assets/lizard icon.png" alt="">
+                        <img id="p1Spock" src="./assets/spock icon.png" alt="">
+                    </div>
                 </div>
-                <p id="p1Message" class="imPerfect txtCenter cyan">Dont cheat</p>
-                
+
+                <p id="p1Message" class="imPerfect txtCenter cyan message">Dont cheat</p>
+
             </div>
             <div class="col">
-                <h1 class="imPerfect white txtCenter">0/1</h1>
+                <h1 class="imPerfect white txtCenter score">0/1</h1>
                 <div class="center">
                     <img src="./assets/samurai 2.png" alt="" class="samuraiSize">
                 </div>
-                <p class="imPerfect txtCenter yellow">Samurai 2</p>
-                <h1 class="imPerfect yellow txtCenter">choose</h1>
+                <p class="imPerfect txtCenter yellow samurai">Samurai 2</p>
+                <h1 class="imPerfect yellow txtCenter choose">choose</h1>
                 <div class="center">
+                    <div class="between optionsDiv">
                     <img id="p2Rock" src="./assets/rock icon.png" alt="">
                     <img id="p2Paper" src="./assets/paper icon.png" alt="">
                     <img id="p2Scissors" src="./assets/scissors icon.png" alt="">
                     <img id="p2Lizzard" src="./assets/lizard icon.png" alt="">
                     <img id="p2Spock" src="./assets/spock icon.png" alt="">
                 </div>
-                <p id="p2Message" class="imPerfect txtCenter yellow">Dont cheat</p>
+                </div>
+                
+                <p id="p2Message" class="imPerfect txtCenter yellow message">Dont cheat</p>
             </div>
         </div>
 
@@ -122,7 +129,7 @@
         <button class="absolute restartBtn imPerfect">Restart</button>
     </div>
 
-    
+
 
 
 
