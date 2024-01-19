@@ -175,9 +175,15 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     p2Col.appendChild(p2ChoicesOuterDiv);
     p2Col.appendChild(dontCheat2);
 
+    let row = document.createElement("div");
+    row.className = "row";
+
+    row.appendChild(p1Col);
+    row.appendChild(p2Col);
 
 
-    fightDiv.append();
+
+    fightDiv.appendChild(row);
 }
 
 export {addSuddenDeathFight, randomBool}
