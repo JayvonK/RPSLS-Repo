@@ -1,3 +1,4 @@
+import { body } from "./app.js";
 
 let p1Point = 0;
 let p2Point = 0;
@@ -6,6 +7,8 @@ let resultDiv = document.getElementById("resultDiv");
 
 function SDWinner(winnerName, choice1, choice2)
 {
+    body.className += " overflow";
+
     resultDiv.className = "resultScreen absolute";
     let winnerBg = document.createElement("img");
     winnerBg.className = "winnerBg";
