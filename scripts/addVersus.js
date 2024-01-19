@@ -1,5 +1,6 @@
 import { addSuddenDeath, addFT3, addFT5 } from "./addGameModes.js";
 
+let AITrue = true;
 let injectAI = document.getElementById("injectAI");
 let inject1v1 = document.getElementById("inject1v1");
 
@@ -16,6 +17,7 @@ function addVersus () {
         addFT3();
         addSuddenDeath();
         addFT5();
+        AITrue = false;
     })
     inject1v1.appendChild(img1v1);
 
@@ -23,11 +25,16 @@ function addVersus () {
     imgAI.src = "./assets/AI shuriken.png";
     imgAI.className = "cursor";
     imgAI.addEventListener('click', (event) => {
-        console.log("1v1 working");
+        inject1v1.className += " none";
+        injectAI.className += " none";
+        addFT3();
+        addSuddenDeath();
+        addFT5();
+        AITrue = true;
     })
     injectAI.appendChild(imgAI);
 }
 
 
 
-export { addVersus, inject1v1, injectAI }
+export { addVersus, inject1v1, injectAI, AITrue }
