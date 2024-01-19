@@ -7,8 +7,10 @@ let volume = document.getElementById("volume");
 let playCol = document.getElementById("playCol");
 let injectRow = document.getElementById("injectRow");
 let fT3Col = document.getElementById("fT3Col");
+let modeBtn = document.getElementById("modeBtn");
 let p1Choice = "";
 let p2Choice = "";
+let lightMode = false;
 
 music.volume = 0.3;
 
@@ -35,6 +37,15 @@ volume.addEventListener('click', () => {
 playBtn.addEventListener('click', (event) => {
     playCol.className += " none";
     addVersus();
+})
+
+modeBtn.addEventListener('click', () => {
+    if(lightMode){
+        lightMode = false;
+    } else {
+        lightMode = true;
+    }
+    
 })
 
 
