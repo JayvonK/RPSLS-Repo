@@ -3,6 +3,12 @@
     src: url(../assets/ImPerfect23.otf);
 }
 
+
+.shurikenDiv {
+    height: 900px;
+    width: 100%;
+}
+
 @font-face {
     font-family: Fira Code;
     src: url(../assets/FiraCode-Regular.ttf);
@@ -10,6 +16,16 @@
 
 .overflow {
     overflow: hidden;
+}
+
+.overflowX {
+    overflow-x: hidden;
+}
+
+.centerCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bodyBg1 {
@@ -22,11 +38,11 @@
     height: 200vh;
 }
 
-/* .lotus {
+.lotus {
     background-image: url(../assets/undefined\ -\ Imgur.gif);
     background-size: cover;
     background-repeat: no-repeat;
-} */
+}
 
 .red {
     color: red;

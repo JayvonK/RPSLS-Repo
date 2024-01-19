@@ -4,8 +4,8 @@ let injectAI = document.getElementById("injectAI");
 let inject1v1 = document.getElementById("inject1v1");
 
 function addVersus () {
-    inject1v1.className = "col";
-    injectAI.className = "col";
+    inject1v1.className = "col centerCol";
+    injectAI.className = "col centerCol";
     let img1v1 = document.createElement("img");
     img1v1.src = "./assets/1v1 Shuriken.png";
     img1v1.className = "cursor";
