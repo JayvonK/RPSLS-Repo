@@ -39,9 +39,29 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 9, 64, 1) 100%);
 }
 
+.bodyBg2 {
+    background: rgb(0,9,64);
+    background: linear-gradient(90deg, rgba(0,9,64,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.whiteBg {
+    background-color: white;
+}
+
 .winnerBg {
     width: 100vw;
     height: 200vh;
+}
+
+.lotus2 {
+    background-image: url(../assets/undefined\ -\ Imgur.gif);
+    -webkit-transform: scaleX(-1);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.reverse {
+    -webkit-transform: scaleX(-1);
 }
 
 .lotus {
@@ -68,6 +88,10 @@
 
 .blackBg {
     background-color: black;
+}
+
+.black {
+    color: black;
 }
 
 .white {

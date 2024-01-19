@@ -1,5 +1,6 @@
 import { musicPlay, stopMusic, music } from "./music.js";
 import { addVersus } from "./addVersus.js";
+import { lightTime, normalTime } from "./lightMode.js";
 
 let body = document.getElementById("body");
 let playBtn = document.getElementById("playBtn");
@@ -17,20 +18,26 @@ music.volume = 0.3;
 
 
 volume.addEventListener('click', () => {
-    console.log("click");
-    console.log(volume.alt);
     if(volume.alt === "volume icon")
     {
         stopMusic();
-        volume.src = "./assets/muted icon.png";
-        volume.alt = "mute icon"
-        console.log("i woke");
+        if(lightMode){
+            volume.src = "./assets/blackvolume icon.png";
+            volume.alt = "mute icon";
+        } else {
+            volume.src = "./assets/muted icon.png";
+            volume.alt = "mute icon";
+        }
     } else if (volume.alt === "mute icon")
     {
         musicPlay();
-        volume.src = "./assets/volume icon.png";
-        volume.alt = "volume icon"
-        console.log("i wokde");
+        if(lightMode){
+            volume.src = "./assets/blackvolume.png";
+            volume.alt = "volume icon";
+        } else {
+            volume.src = "./assets/volume icon.png";
+        volume.alt = "volume icon";
+        }
     }
 })
 
@@ -46,8 +53,15 @@ modeBtn.addEventListener('click', () => {
         lightMode = true;
     }
 
+    if(lightMode)
+    {
+        lightTime();
+    }else{
+        normalTime();
+    }
+    
 })
 
 
 
-export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, playBtn, modeBtn }
+export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, playBtn, modeBtn, volume }

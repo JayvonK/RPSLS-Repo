@@ -889,4 +889,4 @@ function displayFT5Winner(choice1, choice2) {
     }
 }
 
-export { displaySDWinner, p1Point, p2Point, FT3Winner, displayFT3Winner, displayFT5Winner }
+export { displaySDWinner, p1Point, p2Point, FT3Winner, displayFT3Winner, displayFT5Winner, home }
