@@ -1,4 +1,4 @@
-import { fT3Col } from "./app.js";
+import { fT3Col, lightMode} from "./app.js";
 import { addSuddenDeathFight, addFT3Fight, addFT5Fight } from "./addFights.js";
 
 
@@ -8,7 +8,12 @@ function addFT3()
 {
     fT3Col.className = "col centerCol";
     let imgFT3 = document.createElement("img");
-    imgFT3.src = "./assets/FT3 shuriken.png";
+    if(lightMode){
+        imgFT3.src = "./assets/blackFT3 shuriken.png";
+    }else{
+        imgFT3.src = "./assets/FT3 shuriken.png";
+    }
+    
     imgFT3.classname = "cursor";
     imgFT3.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
@@ -22,7 +27,12 @@ function addSuddenDeath()
 {
     fT3Col.className = "col centerCol";
     let imgSuddenDeath = document.createElement("img");
-    imgSuddenDeath.src = "./assets/sudden death shuriken.png";
+    if(lightMode){
+        imgSuddenDeath.src = "./assets/blacksudden death shuriken.png";
+    }else{
+        imgSuddenDeath.src = "./assets/sudden death shuriken.png";
+    }
+    
     imgSuddenDeath.className = "cursor";
     imgSuddenDeath.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
@@ -36,7 +46,12 @@ function addFT5()
 {
     fT3Col.className = "col centerCol";
     let imgFT5 = document.createElement("img");
-    imgFT5.src = "./assets/FT5 shuriken.png";
+    if(lightMode){
+        imgFT5.src = "./assets/blackFT5 shuriken.png";
+    }else{
+        imgFT5.src = "./assets/FT5 shuriken.png";
+    }
+    
     imgFT5.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
         addFT5Fight(0, 0, "dont cheat", "dont cheat");

@@ -1,4 +1,5 @@
 import { addSuddenDeath, addFT3, addFT5 } from "./addGameModes.js";
+import { lightMode } from "./app.js";
 
 let AITrue = true;
 let inject1v1 = document.getElementById("inject1v1");
@@ -6,7 +7,11 @@ let inject1v1 = document.getElementById("inject1v1");
 function addVersus () {
     inject1v1.className = "col centerCol";
     let img1v1 = document.createElement("img");
-    img1v1.src = "./assets/1v1 Shuriken.png";
+    if(lightMode){
+        img1v1.src = "./assets/black1v1 Shuriken.png";
+    } else {
+        img1v1.src = "./assets/1v1 Shuriken.png";
+    }
     img1v1.className = "cursor";
     img1v1.addEventListener('click', (event) => {
         console.log("1v1 working");
@@ -19,7 +24,11 @@ function addVersus () {
     inject1v1.appendChild(img1v1);
 
     let imgAI = document.createElement("img");
-    imgAI.src = "./assets/AI shuriken.png";
+    if(lightMode){
+        imgAI.src = "./assets/blackAI shuriken.png";
+    }else {
+        imgAI.src = "./assets/AI shuriken.png";
+    }
     imgAI.className = "cursor";
     imgAI.addEventListener('click', (event) => {
         inject1v1.className += " none";

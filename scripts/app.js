@@ -64,4 +64,4 @@ modeBtn.addEventListener('click', () => {
 
 
 
-export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, playBtn, modeBtn, volume }
+export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, playBtn, modeBtn, volume, lightMode }

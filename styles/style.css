@@ -54,14 +54,13 @@
 }
 
 .lotus2 {
-    background-image: url(../assets/undefined\ -\ Imgur.gif);
-    -webkit-transform: scaleX(-1);
+    background-image: url(../assets/output-onlinegiftools.gif);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .reverse {
-    -webkit-transform: scaleX(-1);
+    /* -webkit-transform: scaleX(-1); */
 }
 
 .lotus {
