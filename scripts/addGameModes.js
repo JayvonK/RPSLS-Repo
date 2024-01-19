@@ -23,7 +23,7 @@ function addSuddenDeath()
     imgSuddenDeath.src = "./assets/sudden death shuriken.png";
     imgSuddenDeath.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
-        addSuddenDeathFight();
+        addSuddenDeathFight(0, 0, "dont cheat", "dont cheat");
     })
 
     inject1v1.appendChild(imgSuddenDeath);

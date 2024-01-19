@@ -10,6 +10,7 @@
 
 body {
     overflow: hidden;
+    width: 100vw;
 }
 
 .bodyBg1 {
@@ -87,6 +88,10 @@ body {
 
 .samuraiSize {
     width: 50%;
+}
+
+.row {
+    width: 100vw;
 }
 
 .center {

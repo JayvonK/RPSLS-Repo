@@ -165,7 +165,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
     choose2.innerText = "choose";
 
     let dontCheat2 = document.createElement("p");
-    dontCheat2.innerText = message1;
+    dontCheat2.innerText = message2;
     dontCheat2.className = "imPerfect txtCenter yellow message";
 
     p2Col.appendChild(p2Score);
