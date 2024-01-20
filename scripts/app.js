@@ -45,6 +45,18 @@ playBtn.addEventListener('click', (event) => {
     playCol.className += " none";
     addVersus();
 })
+playBtn.addEventListener('mouseover', (event) => {
+    playBtn.src = "./assets/cyanPlay Shuriken.png";
+    if(lightMode){
+        playBtn.src = "./assets/pinkplay.png";
+    }
+})
+playBtn.addEventListener("mouseleave", (event) => {
+    playBtn.src = "./assets/Play Shuriken.png";
+    if(lightMode){
+        playBtn.src = "./assets/blackPlay Shuriken.png";
+    }
+})
 
 modeBtn.addEventListener('click', () => {
     if(lightMode){
@@ -59,7 +71,18 @@ modeBtn.addEventListener('click', () => {
     }else{
         normalTime();
     }
-    
+})
+modeBtn.addEventListener('mouseover', (event) => {
+    modeBtn.src = "./assets/cyanModes.png";
+    if(lightMode){
+        modeBtn.src = "./assets/pinkmode.png";
+    }
+})
+ modeBtn.addEventListener("mouseleave", (event) => {
+    modeBtn.src = "./assets/Modes.png";
+    if(lightMode){
+        modeBtn.src = "./assets/blackModes.png";
+    }
 })
 
 

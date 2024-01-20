@@ -216,7 +216,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         row.appendChild(p2Col);
 
         let fightBtn = document.createElement("div");
-        fightBtn.className = "fightBtn imPerfect white txtCenter";
+        fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', async (event) => {
             if (p1Choice === "") {
@@ -249,7 +249,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
             dontCheat1.className = "imPerfect txtCenter white message";
             choose1.className = "imPerfect txtCenter white choose";
             samurai1Txt.className = "imPerfect txtCenter white samurai";
-            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter centerCol cursor";
             vs.className = "txtCenter black imPerfect absolute vs";
             fightDiv.className = "container-fluid lotus2";
         }
@@ -507,7 +507,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         row.appendChild(p2Col);
 
         let fightBtn = document.createElement("div");
-        fightBtn.className = "fightBtn imPerfect white txtCenter";
+        fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', (event) => {
             if (p1Choice === "" && p2Choice === "") {
@@ -549,7 +549,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
             dontCheat1.className = "imPerfect txtCenter white message";
             choose1.className = "imPerfect txtCenter white choose";
             samurai1Txt.className = "imPerfect txtCenter white samurai";
-            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter centerCol cursor";
             vs.className = "txtCenter black imPerfect absolute vs";
             fightDiv.className = "container-fluid lotus2";
         }
@@ -764,7 +764,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         row.appendChild(p2Col);
 
         let fightBtn = document.createElement("div");
-        fightBtn.className = "fightBtn imPerfect white txtCenter";
+        fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', async (event) => {
             if (p1Choice === "") {
@@ -798,7 +798,7 @@ function addFT3Fight(point1, point2, message1, message2) {
             dontCheat1.className = "imPerfect txtCenter white message";
             choose1.className = "imPerfect txtCenter white choose";
             samurai1Txt.className = "imPerfect txtCenter white samurai";
-            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter centerCol cursor";
             vs.className = "txtCenter black imPerfect absolute vs";
             fightDiv.className = "container-fluid lotus2";
         }
@@ -1056,7 +1056,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         row.appendChild(p2Col);
 
         let fightBtn = document.createElement("div");
-        fightBtn.className = "fightBtn imPerfect white txtCenter";
+        fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', (event) => {
             if (p1Choice === "" && p2Choice === "") {
@@ -1098,7 +1098,7 @@ function addFT3Fight(point1, point2, message1, message2) {
             dontCheat1.className = "imPerfect txtCenter white message";
             choose1.className = "imPerfect txtCenter white choose";
             samurai1Txt.className = "imPerfect txtCenter white samurai";
-            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter centerCol cursor";
             vs.className = "txtCenter black imPerfect absolute vs";
             fightDiv.className = "container-fluid lotus2";
         }
@@ -1311,7 +1311,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         row.appendChild(p2Col);
 
         let fightBtn = document.createElement("div");
-        fightBtn.className = "fightBtn imPerfect white txtCenter";
+        fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', async (event) => {
             if (p1Choice === "") {
@@ -1345,7 +1345,7 @@ function addFT5Fight(point1, point2, message1, message2) {
             dontCheat1.className = "imPerfect txtCenter white message";
             choose1.className = "imPerfect txtCenter white choose";
             samurai1Txt.className = "imPerfect txtCenter white samurai";
-            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter centerCol cursor";
             vs.className = "txtCenter black imPerfect absolute vs";
             fightDiv.className = "container-fluid lotus2";
         }
@@ -1603,7 +1603,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         row.appendChild(p2Col);
 
         let fightBtn = document.createElement("div");
-        fightBtn.className = "fightBtn imPerfect white txtCenter";
+        fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', (event) => {
             if (p1Choice === "" && p2Choice === "") {
@@ -1645,7 +1645,7 @@ function addFT5Fight(point1, point2, message1, message2) {
             dontCheat1.className = "imPerfect txtCenter white message";
             choose1.className = "imPerfect txtCenter white choose";
             samurai1Txt.className = "imPerfect txtCenter white samurai";
-            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter centerCol cursor";
             vs.className = "txtCenter black imPerfect absolute vs";
             fightDiv.className = "container-fluid lotus2";
         }

@@ -19,6 +19,18 @@ function addFT3()
         shurikenDiv.className += " none";
         addFT3Fight(0, 0, "dont cheat", "dont cheat");
     })
+    imgFT3.addEventListener('mouseover', (event) => {
+        imgFT3.src = "./assets/cyan FT3 shuriken.png";
+        if(lightMode){
+            imgFT3.src = "./assets/pinkFT3.png";
+        }
+    })
+    imgFT3.addEventListener("mouseleave", (event) => {
+        imgFT3.src = "./assets/FT3 shuriken.png";
+        if(lightMode){
+            imgFT3.src = "./assets/blackFT3 shuriken.png";
+        }
+    })
 
     fT3Col.appendChild(imgFT3);
 }
@@ -37,6 +49,18 @@ function addSuddenDeath()
     imgSuddenDeath.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
         addSuddenDeathFight(0, 0, "dont cheat", "dont cheat");
+    })
+    imgSuddenDeath.addEventListener('mouseover', (event) => {
+        imgSuddenDeath.src = "./assets/cyansudden death shuriken.png";
+        if(lightMode){
+            imgSuddenDeath.src = "./assets/pinksuddenDeath.png";
+        }
+    })
+    imgSuddenDeath.addEventListener("mouseleave", (event) => {
+        imgSuddenDeath.src = "./assets/sudden death shuriken.png";
+        if(lightMode){
+            imgSuddenDeath.src = "./assets/blacksudden death shuriken.png";
+        }
     })
 
     fT3Col.appendChild(imgSuddenDeath);
@@ -59,13 +83,14 @@ function addFT5()
     imgFT5.addEventListener('mouseover', (event) => {
         imgFT5.src = "./assets/cyanFT5 shuriken.png";
         if(lightMode){
-            imgFT5.src = "./assets/cyanFT5 shuriken.png";
+            imgFT5.src = "./assets/pinkFT5.png";
         }
-        console.log("im wokring");
     })
-    imgFT5.addEventListener('mouseover', (event) => {
-        imgFT5.src = "./assets/cyanFT5 shuriken.png";
-        console.log("im wokring");
+    imgFT5.addEventListener("mouseleave", (event) => {
+        imgFT5.src = "./assets/FT5 shuriken.png";
+        if(lightMode){
+            imgFT5.src = "./assets/blackFT5 shuriken.png";
+        }
     })
 
     fT3Col.appendChild(imgFT5);

@@ -21,6 +21,18 @@ function addVersus () {
         addFT5();
         AITrue = false;
     })
+    img1v1.addEventListener('mouseover', (event) => {
+        img1v1.src = "./assets/cyan1v1 Shuriken.png";
+        if(lightMode){
+            img1v1.src = "./assets/pink1v1.png";
+        }
+    })
+    img1v1.addEventListener("mouseleave", (event) => {
+        img1v1.src = "./assets/1v1 Shuriken.png";
+        if(lightMode){
+            img1v1.src = "./assets/black1v1 Shuriken.png";
+        }
+    })
     inject1v1.appendChild(img1v1);
 
     let imgAI = document.createElement("img");
@@ -37,6 +49,19 @@ function addVersus () {
         addFT5();
         AITrue = true;
     })
+    imgAI.addEventListener('mouseover', (event) => {
+        imgAI.src = "./assets/cyanAI shuriken.png";
+        if(lightMode){
+            imgAI.src = "./assets/pinkai.png";
+        }
+    })
+    imgAI.addEventListener("mouseleave", (event) => {
+        imgAI.src = "./assets/AI shuriken.png";
+        if(lightMode){
+            imgAI.src = "./assets/blackAI shuriken.png";
+        }
+    })
+    
     inject1v1.appendChild(imgAI);
 }
 
