@@ -1,5 +1,6 @@
 import { displaySDWinner, p1Point, p2Point, displayFT3Winner, displayFT5Winner } from "./addSDResults.js";
 import { AITrue } from "./addVersus.js";
+import { lightMode } from "./app.js";
 let fightDiv = document.getElementById("fightDiv");
 
 
@@ -29,7 +30,12 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
             p1Choice = "rock";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
+            
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -39,7 +45,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
             p1Choice = "paper";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -49,7 +59,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
             p1Choice = "scissors";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -59,7 +73,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
             p1Choice = "lizzard";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -69,7 +87,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
             p1Choice = "spock";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -212,6 +234,26 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         vs.className = "txtCenter white imPerfect absolute vs";
         vs.textContent = "vs";
 
+        if(lightMode){
+            samurai1Img.src = "./assets/blacksamurai 1.png";
+            samurai2Img.src = "./assets/blacksamurai 2.png";
+            p2Score.className = "imPerfect black txtCenter score";
+            dontCheat2.className = "imPerfect txtCenter black message";
+            choose2.className = "imPerfect txtCenter black choose";
+            samurai2Txt.className = "imPerfect txtCenter black samurai";
+            rockImg2.src = "./assets/blackquestion mark.png";
+            scissorsImg2.src = "./assets/blackquestion mark.png";
+            paperImg2.src = "./assets/blackquestion mark.png";
+            lizzardImg2.src = "./assets/blackquestion mark.png";
+            spockImg2.src = "./assets/blackquestion mark.png";
+            dontCheat1.className = "imPerfect txtCenter white message";
+            choose1.className = "imPerfect txtCenter white choose";
+            samurai1Txt.className = "imPerfect txtCenter white samurai";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            vs.className = "txtCenter black imPerfect absolute vs";
+            fightDiv.className = "container-fluid lotus2";
+        }
+
         fightDiv.appendChild(row);
         fightDiv.appendChild(fightBtn);
         fightDiv.appendChild(vs);
@@ -230,7 +272,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
             p1Choice = "rock";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -240,7 +286,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
             p1Choice = "paper";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -250,7 +300,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
             p1Choice = "scissors";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -260,7 +314,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
             p1Choice = "lizzard";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -270,7 +328,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
             p1Choice = "spock";
-            dontCheat1.className = "imPerfect txtCenter cyan message";
+            if(lightMode){
+                dontCheat1.className = "imPerfect txtCenter white message";
+            }else {
+                dontCheat1.className = "imPerfect txtCenter cyan message";
+            }
             dontCheat1.innerText = "ready to battle";
         })
 
@@ -331,7 +393,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         rockImg2.className = "cursor";
         rockImg2.addEventListener('click', (event) => {
             p2Choice = "rock";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -341,7 +407,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         paperImg2.className = "cursor";
         paperImg2.addEventListener('click', (event) => {
             p2Choice = "paper";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -351,7 +421,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         scissorsImg2.className = "cursor";
         scissorsImg2.addEventListener('click', (event) => {
             p2Choice = "scissors";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -361,7 +435,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
             p2Choice = "lizzard";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -371,7 +449,11 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         spockImg2.className = "cursor";
         spockImg2.addEventListener('click', (event) => {
             p2Choice = "spock";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -451,6 +533,26 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         let vs = document.createElement("h1");
         vs.className = "txtCenter white imPerfect absolute vs";
         vs.textContent = "vs";
+
+        if(lightMode){
+            samurai1Img.src = "./assets/blacksamurai 1.png";
+            samurai2Img.src = "./assets/blacksamurai 2.png";
+            p2Score.className = "imPerfect black txtCenter score";
+            dontCheat2.className = "imPerfect txtCenter black message";
+            choose2.className = "imPerfect txtCenter black choose";
+            samurai2Txt.className = "imPerfect txtCenter black samurai";
+            rockImg2.src = "./assets/blackrock.png";
+            scissorsImg2.src = "./assets/blackscissors.png";
+            paperImg2.src = "./assets/blackpaper.png";
+            lizzardImg2.src = "./assets/blacklizzard.png";
+            spockImg2.src = "./assets/blackspock.png";
+            dontCheat1.className = "imPerfect txtCenter white message";
+            choose1.className = "imPerfect txtCenter white choose";
+            samurai1Txt.className = "imPerfect txtCenter white samurai";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            vs.className = "txtCenter black imPerfect absolute vs";
+            fightDiv.className = "container-fluid lotus2";
+        }
 
         fightDiv.appendChild(row);
         fightDiv.appendChild(fightBtn);
@@ -780,7 +882,11 @@ function addFT3Fight(point1, point2, message1, message2) {
         rockImg2.className = "cursor";
         rockImg2.addEventListener('click', (event) => {
             p2Choice = "rock";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -790,7 +896,11 @@ function addFT3Fight(point1, point2, message1, message2) {
         paperImg2.className = "cursor";
         paperImg2.addEventListener('click', (event) => {
             p2Choice = "paper";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -800,7 +910,11 @@ function addFT3Fight(point1, point2, message1, message2) {
         scissorsImg2.className = "cursor";
         scissorsImg2.addEventListener('click', (event) => {
             p2Choice = "scissors";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -810,7 +924,11 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
             p2Choice = "lizzard";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -820,7 +938,11 @@ function addFT3Fight(point1, point2, message1, message2) {
         spockImg2.className = "cursor";
         spockImg2.addEventListener('click', (event) => {
             p2Choice = "spock";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -900,6 +1022,26 @@ function addFT3Fight(point1, point2, message1, message2) {
         let vs = document.createElement("h1");
         vs.className = "txtCenter white imPerfect absolute vs";
         vs.textContent = "vs";
+
+        if(lightMode){
+            samurai1Img.src = "./assets/blacksamurai 1.png";
+            samurai2Img.src = "./assets/blacksamurai 2.png";
+            p2Score.className = "imPerfect black txtCenter score";
+            dontCheat2.className = "imPerfect txtCenter black message";
+            choose2.className = "imPerfect txtCenter black choose";
+            samurai2Txt.className = "imPerfect txtCenter black samurai";
+            rockImg2.src = "./assets/blackrock.png";
+            scissorsImg2.src = "./assets/blackscissors.png";
+            paperImg2.src = "./assets/blackpaper.png";
+            lizzardImg2.src = "./assets/blacklizzard.png";
+            spockImg2.src = "./assets/blackspock.png";
+            dontCheat1.className = "imPerfect txtCenter white message";
+            choose1.className = "imPerfect txtCenter white choose";
+            samurai1Txt.className = "imPerfect txtCenter white samurai";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            vs.className = "txtCenter black imPerfect absolute vs";
+            fightDiv.className = "container-fluid lotus2";
+        }
 
         fightDiv.appendChild(row);
         fightDiv.appendChild(fightBtn);
@@ -1227,7 +1369,11 @@ function addFT5Fight(point1, point2, message1, message2) {
         rockImg2.className = "cursor";
         rockImg2.addEventListener('click', (event) => {
             p2Choice = "rock";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -1237,7 +1383,11 @@ function addFT5Fight(point1, point2, message1, message2) {
         paperImg2.className = "cursor";
         paperImg2.addEventListener('click', (event) => {
             p2Choice = "paper";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -1247,7 +1397,11 @@ function addFT5Fight(point1, point2, message1, message2) {
         scissorsImg2.className = "cursor";
         scissorsImg2.addEventListener('click', (event) => {
             p2Choice = "scissors";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -1257,7 +1411,11 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
             p2Choice = "lizzard";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -1267,7 +1425,11 @@ function addFT5Fight(point1, point2, message1, message2) {
         spockImg2.className = "cursor";
         spockImg2.addEventListener('click', (event) => {
             p2Choice = "spock";
-            dontCheat2.className = "imPerfect txtCenter yellow message";
+            if(lightMode){
+                dontCheat2.className = "imPerfect txtCenter black message";
+            }else {
+                dontCheat2.className = "imPerfect txtCenter yellow message";
+            }
             dontCheat2.innerText = "ready to battle";
         })
 
@@ -1347,6 +1509,26 @@ function addFT5Fight(point1, point2, message1, message2) {
         let vs = document.createElement("h1");
         vs.className = "txtCenter white imPerfect absolute vs";
         vs.textContent = "vs";
+
+        if(lightMode){
+            samurai1Img.src = "./assets/blacksamurai 1.png";
+            samurai2Img.src = "./assets/blacksamurai 2.png";
+            p2Score.className = "imPerfect black txtCenter score";
+            dontCheat2.className = "imPerfect txtCenter black message";
+            choose2.className = "imPerfect txtCenter black choose";
+            samurai2Txt.className = "imPerfect txtCenter black samurai";
+            rockImg2.src = "./assets/blackrock.png";
+            scissorsImg2.src = "./assets/blackscissors.png";
+            paperImg2.src = "./assets/blackpaper.png";
+            lizzardImg2.src = "./assets/blacklizzard.png";
+            spockImg2.src = "./assets/blackspock.png";
+            dontCheat1.className = "imPerfect txtCenter white message";
+            choose1.className = "imPerfect txtCenter white choose";
+            samurai1Txt.className = "imPerfect txtCenter white samurai";
+            fightBtn.className = "fightBtn2 imPerfect black txtCenter";
+            vs.className = "txtCenter black imPerfect absolute vs";
+            fightDiv.className = "container-fluid lotus2";
+        }
 
         fightDiv.appendChild(row);
         fightDiv.appendChild(fightBtn);

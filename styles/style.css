@@ -40,8 +40,8 @@
 }
 
 .bodyBg2 {
-    background: rgb(0,9,64);
-    background: linear-gradient(90deg, rgba(0,9,64,1) 0%, rgba(255,255,255,1) 100%);
+    background: rgb(0, 9, 64);
+    background: linear-gradient(90deg, rgba(0, 9, 64, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .whiteBg {
@@ -189,6 +189,20 @@
 .fightBtn {
     background: rgb(106, 0, 98);
     background: linear-gradient(90deg, rgba(106, 0, 98, 1) 0%, rgba(255, 219, 93, 1) 100%);
+    border: none;
+    border-radius: 100px;
+    width: 290px;
+    height: 86px;
+    font-size: 48px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fightBtn2 {
+    background: rgb(255, 126, 53);
+    background: linear-gradient(90deg, rgba(255, 126, 53, 1) 0%, rgba(255, 255, 255, 1) 100%);
     border: none;
     border-radius: 100px;
     width: 290px;
