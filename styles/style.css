@@ -291,6 +291,19 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(140, 140, 140, 1) 100%);
 }
 
+.exitBtn2 {
+    top: 70%;
+    left: 55%;
+    z-index: 2;
+    border: none;
+    border-radius: 100px;
+    width: 406px;
+    height: 112px;
+    font-size: 48px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(89,89,89,1) 100%);
+}
+
 .restartBtn {
     top: 70%;
     left: 25%;
@@ -302,6 +315,19 @@
     font-size: 48px;
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(140, 140, 140, 1) 100%);
+}
+
+.restartBtn2 {
+    top: 70%;
+    left: 25%;
+    z-index: 2;
+    border: none;
+    border-radius: 100px;
+    width: 406px;
+    height: 112px;
+    font-size: 48px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(89,89,89,1) 100%);
 }
 
 .score {

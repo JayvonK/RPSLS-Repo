@@ -14,7 +14,7 @@ function addFT3()
         imgFT3.src = "./assets/FT3 shuriken.png";
     }
     
-    imgFT3.classname = "cursor";
+    imgFT3.className = "cursor";
     imgFT3.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
         addFT3Fight(0, 0, "dont cheat", "dont cheat");
@@ -51,10 +51,21 @@ function addFT5()
     }else{
         imgFT5.src = "./assets/FT5 shuriken.png";
     }
-    
+    imgFT5.className = "cursor";
     imgFT5.addEventListener('click', (event) => {
         shurikenDiv.className += " none";
         addFT5Fight(0, 0, "dont cheat", "dont cheat");
+    })
+    imgFT5.addEventListener('mouseover', (event) => {
+        imgFT5.src = "./assets/cyanFT5 shuriken.png";
+        if(lightMode){
+            imgFT5.src = "./assets/cyanFT5 shuriken.png";
+        }
+        console.log("im wokring");
+    })
+    imgFT5.addEventListener('mouseover', (event) => {
+        imgFT5.src = "./assets/cyanFT5 shuriken.png";
+        console.log("im wokring");
     })
 
     fT3Col.appendChild(imgFT5);

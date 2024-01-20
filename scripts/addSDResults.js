@@ -85,6 +85,10 @@ function SDWinner(winnerName, choice1, choice2) {
         inject1v1.innerHTML = "";
         inject1v1.className += " none";
         fightDiv.innerHTML = "";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+            shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        }
         p1Point = 0;
         p2Point = 0;
     });
@@ -97,10 +101,23 @@ function SDWinner(winnerName, choice1, choice2) {
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
         body.className = "bodyBg1 overflowX";
+        if(lightMode)
+        {
+            body.className = "bodyBg2 overflowX"; 
+        }
         p1Point = 0;
         p2Point = 0;
         addSuddenDeathFight(p1Point, p2Point, "dont cheat", "dont cheat");
     });
+
+    if(lightMode){
+        body.className = "bodyBg2 overflow";
+        winnerTxt2.className = "winnerTxt2 firaCode absolute black";
+        winnerTxt.className = "imPerfect black absolute winnerTxt";
+        exitBtn.className = "absolute exitBtn2 imPerfect white";
+        restartBtn.className = "absolute restartBtn2 imPerfect white";
+        winnerBg.src = "./assets/resultscreenbg2.png";
+    }
 
     resultDiv.appendChild(winnerBg);
     resultDiv.appendChild(winnerTxt);
@@ -147,9 +164,21 @@ function FT3Winner(winnerName, choice1, choice2) {
         inject1v1.innerHTML = "";
         inject1v1.className += " none";
         fightDiv.innerHTML = "";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+            shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        }
         p1Point = 0;
         p2Point = 0;
     });
+
+    if(lightMode){
+        body.className = "bodyBg2 overflow";
+        winnerTxt2.className = "winnerTxt2 firaCode absolute black";
+        winnerTxt.className = "imPerfect black absolute winnerTxt";
+        exitBtn.className = "absolute exitBtn2 imPerfect white";
+        winnerBg.src = "./assets/resultscreenbg2.png";
+    }
 
     resultDiv.appendChild(winnerBg);
     resultDiv.appendChild(winnerTxt);
@@ -195,9 +224,21 @@ function FT5Winner(winnerName, choice1, choice2) {
         inject1v1.innerHTML = "";
         inject1v1.className += " none";
         fightDiv.innerHTML = "";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+            shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        }
         p1Point = 0;
         p2Point = 0;
     });
+
+    if(lightMode){
+        body.className = "bodyBg2 overflow";
+        winnerTxt2.className = "winnerTxt2 firaCode absolute black";
+        winnerTxt.className = "imPerfect black absolute winnerTxt";
+        exitBtn.className = "absolute exitBtn2 imPerfect white";
+        winnerBg.src = "./assets/resultscreenbg2.png";
+    }
 
     resultDiv.appendChild(winnerBg);
     resultDiv.appendChild(winnerTxt);
@@ -237,6 +278,10 @@ function TieSD(choice1, choice2) {
         inject1v1.innerHTML = "";
         inject1v1.className += " none";
         fightDiv.innerHTML = "";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+            shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        }
         p1Point = 0;
         p2Point = 0;
     });
@@ -249,8 +294,20 @@ function TieSD(choice1, choice2) {
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
         body.className = "bodyBg1 overflowX";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+        }
         addSuddenDeathFight(p1Point, p2Point, "dont cheat", "dont cheat");
     });
+
+    if(lightMode){
+        body.className = "bodyBg2 overflow";
+        winnerTxt2.className = "winnerTxt2 firaCode absolute black";
+        winnerTxt.className = "imPerfect black absolute winnerTxt";
+        exitBtn.className = "absolute exitBtn2 imPerfect white";
+        contnueBtn.className = "absolute restartBtn2 imPerfect white";
+        winnerBg.src = "./assets/resultscreenbg2.png";
+    }
 
     resultDiv.appendChild(contnueBtn);
     resultDiv.appendChild(winnerBg);
@@ -291,6 +348,10 @@ function TieFT3(choice1, choice2) {
         inject1v1.innerHTML = "";
         inject1v1.className += " none";
         fightDiv.innerHTML = "";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+            shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        }
         p1Point = 0;
         p2Point = 0;
     });
@@ -303,8 +364,20 @@ function TieFT3(choice1, choice2) {
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
         body.className = "bodyBg1 overflowX";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+        }
         addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
     });
+
+    if(lightMode){
+        body.className = "bodyBg2 overflow";
+        winnerTxt2.className = "winnerTxt2 firaCode absolute black";
+        winnerTxt.className = "imPerfect black absolute winnerTxt";
+        exitBtn.className = "absolute exitBtn2 imPerfect white";
+        contnueBtn.className = "absolute restartBtn2 imPerfect white";
+        winnerBg.src = "./assets/resultscreenbg2.png";
+    }
 
     resultDiv.appendChild(contnueBtn);
     resultDiv.appendChild(winnerBg);
@@ -345,6 +418,10 @@ function TieFT5(choice1, choice2) {
         inject1v1.innerHTML = "";
         inject1v1.className += " none";
         fightDiv.innerHTML = "";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+            shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        }
         p1Point = 0;
         p2Point = 0;
     });
@@ -357,8 +434,20 @@ function TieFT5(choice1, choice2) {
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
         body.className = "bodyBg1 overflowX";
+        if(lightMode){
+            body.className = "bodyBg2 overflowX";
+        }
         addFT5Fight(p1Point, p2Point, "dont cheat", "dont cheat");
     });
+
+    if(lightMode){
+        body.className = "bodyBg2 overflow";
+        winnerTxt2.className = "winnerTxt2 firaCode absolute black";
+        winnerTxt.className = "imPerfect black absolute winnerTxt";
+        exitBtn.className = "absolute exitBtn2 imPerfect white";
+        contnueBtn.className = "absolute restartBtn2 imPerfect white";
+        winnerBg.src = "./assets/resultscreenbg2.png";
+    }
 
     resultDiv.appendChild(contnueBtn);
     resultDiv.appendChild(winnerBg);
@@ -692,12 +781,19 @@ function displayFT3Winner(choice1, choice2) {
     if (p1Point === 3 || p2Point === 3) {
         let restartBtn = document.createElement("button");
         restartBtn.className = "absolute restartBtn imPerfect";
+        if(lightMode){
+        restartBtn.className = "absolute restartBtn2 imPerfect white";
+        }
+        
         restartBtn.innerText = "restart";
         restartBtn.addEventListener("click", (event) => {
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
             body.className = "bodyBg1 overflowX";
+            if(lightMode){
+                body.className = "bodyBg2 overflowX";
+            }
             p1Point = 0;
             p2Point = 0;
             addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
@@ -706,12 +802,18 @@ function displayFT3Winner(choice1, choice2) {
     } else {
         let contnueBtn = document.createElement("button");
         contnueBtn.className = "absolute restartBtn imPerfect";
+        if(lightMode){
+            contnueBtn.className = "absolute restartBtn2 imPerfect white";
+        }
         contnueBtn.innerText = "continue";
         contnueBtn.addEventListener("click", (event) => {
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
             body.className = "bodyBg1 overflowX";
+            if(lightMode){
+                body.className = "bodyBg2 overflowX";
+            }
             addFT3Fight(p1Point, p2Point, "dont cheat", "dont cheat");
         });
         resultDiv.appendChild(contnueBtn);
@@ -881,12 +983,18 @@ function displayFT5Winner(choice1, choice2) {
     if (p1Point === 5 || p2Point === 5) {
         let restartBtn = document.createElement("button");
         restartBtn.className = "absolute restartBtn imPerfect";
+        if(lightMode){
+            restartBtn.className = "absolute restartBtn2 imPerfect white";
+        }
         restartBtn.innerText = "restart";
         restartBtn.addEventListener("click", (event) => {
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
             body.className = "bodyBg1 overflowX";
+            if(lightMode){
+                body.className = "bodyBg2 overflowX";
+            }
             p1Point = 0;
             p2Point = 0;
             addFT5Fight(p1Point, p2Point, "dont cheat", "dont cheat");
@@ -895,12 +1003,18 @@ function displayFT5Winner(choice1, choice2) {
     } else {
         let contnueBtn = document.createElement("button");
         contnueBtn.className = "absolute restartBtn imPerfect";
+        if(lightMode){
+            contnueBtn.className = "absolute restartBtn2 imPerfect white";
+        }
         contnueBtn.innerText = "continue";
         contnueBtn.addEventListener("click", (event) => {
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
             body.className = "bodyBg1 overflowX";
+            if(lightMode){
+                body.className = "bodyBg2 overflowX";
+            }
             addFT5Fight(p1Point, p2Point, "dont cheat", "dont cheat");
         });
         resultDiv.appendChild(contnueBtn);
