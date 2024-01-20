@@ -72,7 +72,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
-            p1Choice = "lizzard";
+            p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
             }else {
@@ -313,7 +313,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
-            p1Choice = "lizzard";
+            p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
             }else {
@@ -434,7 +434,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg2.alt = "img of lizzard";
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
-            p2Choice = "lizzard";
+            p2Choice = "lizard";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
             }else {
@@ -620,7 +620,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
-            p1Choice = "lizzard";
+            p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
             }else {
@@ -862,7 +862,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
-            p1Choice = "lizzard";
+            p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
             }else {
@@ -983,7 +983,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg2.alt = "img of lizzard";
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
-            p2Choice = "lizzard";
+            p2Choice = "lizard";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
             }else {
@@ -1167,7 +1167,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
-            p1Choice = "lizzard";
+            p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
             }else {
@@ -1409,7 +1409,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
-            p1Choice = "lizzard";
+            p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
             }else {
@@ -1530,7 +1530,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg2.alt = "img of lizzard";
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
-            p2Choice = "lizzard";
+            p2Choice = "lizard";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
             }else {

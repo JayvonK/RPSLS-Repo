@@ -2,6 +2,7 @@ import {
     body,
     playCol,
     fT3Col,
+    lightMode
 } from "./app.js";
 import { addSuddenDeathFight, fightDiv, addFT3Fight, addFT5Fight } from "./addFights.js";
 import { shurikenDiv } from "./addGameModes.js";
@@ -9,6 +10,21 @@ import { AITrue, inject1v1 } from "./addVersus.js";
 
 let home = document.getElementById("home");
 home.addEventListener('click', () => {
+    if(lightMode){
+        resultDiv.innerHTML = "";
+        resultDiv.className = "resultScreen absolute none";
+        fightDiv.className = " none";
+        body.className = "bodyBg2 overflowX";
+        shurikenDiv.className = "container-fluid lotus2 shurikenDiv";
+        playCol.className = "col centerCol";
+        fT3Col.className = "col none";
+        fT3Col.innerHTML = "";
+        inject1v1.innerHTML = "";
+        inject1v1.className = "col none";
+        fightDiv.innerHTML = "";
+        p1Point = 0;
+        p2Point = 0;
+    } else {
         resultDiv.innerHTML = "";
         resultDiv.className = "resultScreen absolute none";
         fightDiv.className = " none";
@@ -22,6 +38,7 @@ home.addEventListener('click', () => {
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
+    }  
 })
 
 let p1Point = 0;
@@ -369,7 +386,7 @@ function displaySDWinner(choice1, choice2) {
                     SDWinner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     SDWinner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
@@ -403,7 +420,7 @@ function displaySDWinner(choice1, choice2) {
                     }
                     p2Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     if (AITrue) {
                         SDWinner("Supreme AI", choice1, choice2);
                     } else {
@@ -434,7 +451,7 @@ function displaySDWinner(choice1, choice2) {
                 case "scissors":
                     TieSD(choice1, choice2);
                     break;
-                case "lizzard":
+                case "lizard":
                     SDWinner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
@@ -448,7 +465,7 @@ function displaySDWinner(choice1, choice2) {
                     break;
             }
             break;
-        case "lizzard":
+        case "lizard":
             switch (choice2) {
                 case "rock":
                     if (AITrue) {
@@ -470,7 +487,7 @@ function displaySDWinner(choice1, choice2) {
                     }
                     p2Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     TieSD(choice1, choice2);
                     break;
                 case "spock":
@@ -497,7 +514,7 @@ function displaySDWinner(choice1, choice2) {
                     SDWinner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     if (AITrue) {
                         SDWinner("Supreme AI", choice1, choice2);
                     } else {
@@ -532,7 +549,7 @@ function displayFT3Winner(choice1, choice2) {
                     FT3Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     FT3Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
@@ -563,7 +580,7 @@ function displayFT3Winner(choice1, choice2) {
                     }
                     p2Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     if (AITrue) {
                         FT3Winner("Supreme AI", choice1, choice2);
                     } else {
@@ -594,7 +611,7 @@ function displayFT3Winner(choice1, choice2) {
                 case "scissors":
                     TieFT3(choice1, choice2);
                     break;
-                case "lizzard":
+                case "lizard":
                     FT3Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
@@ -608,7 +625,7 @@ function displayFT3Winner(choice1, choice2) {
                     break;
             }
             break;
-        case "lizzard":
+        case "lizard":
             switch (choice2) {
                 case "rock":
                     if (AITrue) {
@@ -630,7 +647,7 @@ function displayFT3Winner(choice1, choice2) {
                     }
                     p2Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     TieFT3(choice1, choice2);
                     break;
                 case "spock":
@@ -657,7 +674,7 @@ function displayFT3Winner(choice1, choice2) {
                     FT3Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     if (AITrue) {
                         FT3Winner("Supreme AI", choice1, choice2);
                     } else {
@@ -702,6 +719,7 @@ function displayFT3Winner(choice1, choice2) {
 }
 
 function displayFT5Winner(choice1, choice2) {
+    console.log("AI chose" + " " + choice2);
     switch (choice1) {
         case "rock":
             switch (choice2) {
@@ -720,7 +738,7 @@ function displayFT5Winner(choice1, choice2) {
                     FT5Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     FT5Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
@@ -751,7 +769,7 @@ function displayFT5Winner(choice1, choice2) {
                     }
                     p2Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     if (AITrue) {
                         FT5Winner("Supreme AI", choice1, choice2);
                     } else {
@@ -782,7 +800,7 @@ function displayFT5Winner(choice1, choice2) {
                 case "scissors":
                     TieFT5(choice1, choice2);
                     break;
-                case "lizzard":
+                case "lizard":
                     FT5Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
@@ -796,7 +814,7 @@ function displayFT5Winner(choice1, choice2) {
                     break;
             }
             break;
-        case "lizzard":
+        case "lizard":
             switch (choice2) {
                 case "rock":
                     if (AITrue) {
@@ -818,7 +836,7 @@ function displayFT5Winner(choice1, choice2) {
                     }
                     p2Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     TieFT5(choice1, choice2);
                     break;
                 case "spock":
@@ -845,7 +863,7 @@ function displayFT5Winner(choice1, choice2) {
                     FT5Winner("Samurai 1", choice1, choice2);
                     p1Point++;
                     break;
-                case "lizzard":
+                case "lizard":
                     if (AITrue) {
                         FT5Winner("Supreme AI", choice1, choice2);
                     } else {
