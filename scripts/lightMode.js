@@ -1,6 +1,7 @@
-import { playBtn, modeBtn, body, volume } from "./app.js";
+import { playBtn, modeBtn, body, volume, lightMode } from "./app.js";
 import { home } from "./addSDResults.js";
 import { shurikenDiv } from "./addGameModes.js";
+import { beepSound } from "./music.js";
 
 let howToPlayBtn = document.getElementById("howToPlayBtn");
 let navRow = document.getElementById("navRow");
@@ -49,6 +50,23 @@ function normalTime() {
     reverseRow.className = "row";
     shurikenDiv.className = "container-fluid lotus shurikenDiv";
 }
+
+
+howToPlayBtn.addEventListener('click', (event) => {
+    beepSound();
+})
+howToPlayBtn.addEventListener('mouseover', (event) => {
+    howToPlayBtn.src = "./assets/cyanhowToPlayshuriken.png";
+    if(lightMode){
+        howToPlayBtn.src = "./assets/pinkhowToPlay.png";
+    }
+})
+ howToPlayBtn.addEventListener("mouseleave", (event) => {
+    howToPlayBtn.src = "./assets/howToPlayshuriken.png";
+    if(lightMode){
+        howToPlayBtn.src = "./assets/blackhowToPlayshuriken.png";
+    }
+})
 
 
 export {lightTime, normalTime}

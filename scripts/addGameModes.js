@@ -1,5 +1,6 @@
 import { fT3Col, lightMode} from "./app.js";
 import { addSuddenDeathFight, addFT3Fight, addFT5Fight } from "./addFights.js";
+import { sword } from "./music.js";
 
 
 let shurikenDiv = document.getElementById("shurikenDiv");
@@ -16,6 +17,7 @@ function addFT3()
     
     imgFT3.className = "cursor";
     imgFT3.addEventListener('click', (event) => {
+        sword();
         shurikenDiv.className += " none";
         addFT3Fight(0, 0, "dont cheat", "dont cheat");
     })
@@ -47,6 +49,7 @@ function addSuddenDeath()
     
     imgSuddenDeath.className = "cursor";
     imgSuddenDeath.addEventListener('click', (event) => {
+        sword();
         shurikenDiv.className += " none";
         addSuddenDeathFight(0, 0, "dont cheat", "dont cheat");
     })
@@ -77,6 +80,7 @@ function addFT5()
     }
     imgFT5.className = "cursor";
     imgFT5.addEventListener('click', (event) => {
+        sword();
         shurikenDiv.className += " none";
         addFT5Fight(0, 0, "dont cheat", "dont cheat");
     })

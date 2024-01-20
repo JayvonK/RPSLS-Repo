@@ -1,6 +1,7 @@
 import { displaySDWinner, p1Point, p2Point, displayFT3Winner, displayFT5Winner } from "./addSDResults.js";
 import { AITrue } from "./addVersus.js";
 import { lightMode } from "./app.js";
+import { sword, beepSound } from "./music.js";
 let fightDiv = document.getElementById("fightDiv");
 
 
@@ -16,6 +17,8 @@ async function AICall() {
 
 function addSuddenDeathFight(point1, point2, message1, message2) {
     if (AITrue) {
+        p1Choice = "";
+        p2Choice = "";
         fightDiv.className = "container-fluid lotus";
 
         let p1ChoicesOuterDiv = document.createElement("div");
@@ -29,6 +32,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         rockImg.alt = "img of rock";
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "rock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -44,6 +48,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         paperImg.alt = "img of paper";
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "paper";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -58,6 +63,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         scissorsImg.alt = "img of scissors";
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "scissors";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -72,6 +78,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -86,6 +93,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         spockImg.alt = "img of spock";
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "spock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -219,6 +227,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', async (event) => {
+            sword();
             if (p1Choice === "") {
                 dontCheat1.innerText = "You didnt choose an option";
                 dontCheat1.className = "imPerfect txtCenter red message";
@@ -258,6 +267,8 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         fightDiv.appendChild(fightBtn);
         fightDiv.appendChild(vs);
     } else {
+        p1Choice = "";
+        p2Choice = "";
         fightDiv.className = "container-fluid lotus";
 
         let p1ChoicesOuterDiv = document.createElement("div");
@@ -271,6 +282,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         rockImg.alt = "img of rock";
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "rock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -285,6 +297,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         paperImg.alt = "img of paper";
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "paper";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -299,6 +312,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         scissorsImg.alt = "img of scissors";
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "scissors";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -313,6 +327,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -327,6 +342,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         spockImg.alt = "img of spock";
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "spock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -392,6 +408,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         rockImg2.alt = "img of rock";
         rockImg2.className = "cursor";
         rockImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "rock";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -406,6 +423,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         paperImg2.alt = "img of paper";
         paperImg2.className = "cursor";
         paperImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "paper";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -420,6 +438,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         scissorsImg2.alt = "img of scissors";
         scissorsImg2.className = "cursor";
         scissorsImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "scissors";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -434,6 +453,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         lizzardImg2.alt = "img of lizzard";
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "lizard";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -448,6 +468,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         spockImg2.alt = "img of spock";
         spockImg2.className = "cursor";
         spockImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "spock";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -510,6 +531,7 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
         fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', (event) => {
+            sword();
             if (p1Choice === "" && p2Choice === "") {
                 dontCheat1.innerText = "You didnt choose an option";
                 dontCheat1.className = "imPerfect txtCenter red message";
@@ -565,6 +587,8 @@ function addSuddenDeathFight(point1, point2, message1, message2) {
 
 function addFT3Fight(point1, point2, message1, message2) {
     if (AITrue) {
+        p1Choice = "";
+        p2Choice = "";
         fightDiv.className = "container-fluid lotus";
 
         let p1ChoicesOuterDiv = document.createElement("div");
@@ -578,6 +602,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         rockImg.alt = "img of rock";
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "rock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -592,6 +617,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         paperImg.alt = "img of paper";
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "paper";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -606,6 +632,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         scissorsImg.alt = "img of scissors";
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "scissors";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -620,6 +647,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -634,6 +662,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         spockImg.alt = "img of spock";
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "spock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -767,6 +796,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', async (event) => {
+            sword();
             if (p1Choice === "") {
                 dontCheat1.innerText = "You didnt choose an option";
                 dontCheat1.className = "imPerfect txtCenter red message";
@@ -807,6 +837,8 @@ function addFT3Fight(point1, point2, message1, message2) {
         fightDiv.appendChild(fightBtn);
         fightDiv.appendChild(vs);
     } else {
+        p1Choice = "";
+        p2Choice = "";
         fightDiv.className = "container-fluid lotus";
 
         let p1ChoicesOuterDiv = document.createElement("div");
@@ -820,6 +852,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         rockImg.alt = "img of rock";
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "rock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -834,6 +867,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         paperImg.alt = "img of paper";
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "paper";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -848,6 +882,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         scissorsImg.alt = "img of scissors";
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "scissors";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -862,6 +897,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -876,6 +912,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         spockImg.alt = "img of spock";
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "spock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -941,6 +978,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         rockImg2.alt = "img of rock";
         rockImg2.className = "cursor";
         rockImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "rock";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -955,6 +993,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         paperImg2.alt = "img of paper";
         paperImg2.className = "cursor";
         paperImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "paper";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -969,6 +1008,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         scissorsImg2.alt = "img of scissors";
         scissorsImg2.className = "cursor";
         scissorsImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "scissors";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -983,6 +1023,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         lizzardImg2.alt = "img of lizzard";
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "lizard";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -997,6 +1038,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         spockImg2.alt = "img of spock";
         spockImg2.className = "cursor";
         spockImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "spock";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -1059,6 +1101,7 @@ function addFT3Fight(point1, point2, message1, message2) {
         fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', (event) => {
+            sword();
             if (p1Choice === "" && p2Choice === "") {
                 dontCheat1.innerText = "You didnt choose an option";
                 dontCheat1.className = "imPerfect txtCenter red message";
@@ -1112,6 +1155,8 @@ function addFT3Fight(point1, point2, message1, message2) {
 
 function addFT5Fight(point1, point2, message1, message2) {
     if (AITrue) {
+        p1Choice = "";
+        p2Choice = "";
         fightDiv.className = "container-fluid lotus";
 
         let p1ChoicesOuterDiv = document.createElement("div");
@@ -1125,6 +1170,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         rockImg.alt = "img of rock";
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "rock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1139,6 +1185,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         paperImg.alt = "img of paper";
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "paper";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1153,6 +1200,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         scissorsImg.alt = "img of scissors";
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "scissors";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1167,6 +1215,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1181,6 +1230,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         spockImg.alt = "img of spock";
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "spock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1314,6 +1364,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', async (event) => {
+            sword();
             if (p1Choice === "") {
                 dontCheat1.innerText = "You didnt choose an option";
                 dontCheat1.className = "imPerfect txtCenter red message";
@@ -1354,6 +1405,8 @@ function addFT5Fight(point1, point2, message1, message2) {
         fightDiv.appendChild(fightBtn);
         fightDiv.appendChild(vs);
     } else {
+        p1Choice = "";
+        p2Choice = "";
         fightDiv.className = "container-fluid lotus";
 
         let p1ChoicesOuterDiv = document.createElement("div");
@@ -1367,6 +1420,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         rockImg.alt = "img of rock";
         rockImg.className = "cursor";
         rockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "rock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1381,6 +1435,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         paperImg.alt = "img of paper";
         paperImg.className = "cursor";
         paperImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "paper";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1395,6 +1450,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         scissorsImg.alt = "img of scissors";
         scissorsImg.className = "cursor";
         scissorsImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "scissors";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1409,6 +1465,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg.alt = "img of lizzard";
         lizzardImg.className = "cursor";
         lizzardImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "lizard";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1423,6 +1480,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         spockImg.alt = "img of spock";
         spockImg.className = "cursor";
         spockImg.addEventListener('click', (event) => {
+            beepSound();
             p1Choice = "spock";
             if(lightMode){
                 dontCheat1.className = "imPerfect txtCenter white message";
@@ -1488,6 +1546,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         rockImg2.alt = "img of rock";
         rockImg2.className = "cursor";
         rockImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "rock";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -1502,6 +1561,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         paperImg2.alt = "img of paper";
         paperImg2.className = "cursor";
         paperImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "paper";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -1516,6 +1576,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         scissorsImg2.alt = "img of scissors";
         scissorsImg2.className = "cursor";
         scissorsImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "scissors";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -1530,6 +1591,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         lizzardImg2.alt = "img of lizzard";
         lizzardImg2.className = "cursor";
         lizzardImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "lizard";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -1544,6 +1606,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         spockImg2.alt = "img of spock";
         spockImg2.className = "cursor";
         spockImg2.addEventListener('click', (event) => {
+            beepSound();
             p2Choice = "spock";
             if(lightMode){
                 dontCheat2.className = "imPerfect txtCenter black message";
@@ -1606,6 +1669,7 @@ function addFT5Fight(point1, point2, message1, message2) {
         fightBtn.className = "fightBtn imPerfect white txtCenter centerCol cursor";
         fightBtn.textContent = "Fight";
         fightBtn.addEventListener('click', (event) => {
+            sword();
             if (p1Choice === "" && p2Choice === "") {
                 dontCheat1.innerText = "You didnt choose an option";
                 dontCheat1.className = "imPerfect txtCenter red message";
@@ -1660,4 +1724,4 @@ function addFT5Fight(point1, point2, message1, message2) {
 
 
 
-export { addSuddenDeathFight, fightDiv, addFT3Fight, addFT5Fight }
+export { addSuddenDeathFight, fightDiv, addFT3Fight, addFT5Fight, p1Choice, p2Choice }

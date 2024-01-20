@@ -17,16 +17,26 @@
         Blood Oath Song
     </audio>
 
+    <audio id="swordSound" controls class="none">
+        <source src="./assets/Great Anime Sword Clash (One Piece Zoro) - Sound Effect for editing.mp3">
+        Sound of Swords Clashing
+    </audio>
+
+    <audio id="beep" controls class="none">
+        <source src="./assets/Button Press sound - Sound Effects.mp3">
+        Button beep sound
+    </audio>
+
     <div class="container-fluid">
         <div id="navRow" class="row blackBg navbarHeight alignCenter">
             <div class="col end">
-                <img id="home" class="cursor" src="./assets/home icon.png" alt="" style="margin-right: 20px;">
+                <img id="home" class="cursor" src="./assets/home icon.png" alt="icon of house" style="margin-right: 20px;">
             </div>
             <div class="col">
                 <h1 id="title" class="txtCenter white imPerfect titleSize">RPSLS</h1>
             </div>
             <div class="col">
-                <img id="volume" src="./assets/muted icon.png" alt="mute icon">
+                <img id="volume" class="cursor" src="./assets/muted icon.png" alt="mute icon">
             </div>
         </div>
     </div>
@@ -37,7 +47,7 @@
         <div id="reverseRow" class="row reverse" style="height: 100%;">
             <div id="playCol" class="col centerCol">
                 <button id="btnModal" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <img id="howToPlayBtn" src="./assets/howToPlayshuriken.png" alt="">
+                    <img id="howToPlayBtn" src="./assets/howToPlayshuriken.png" alt="picture of how to play shuriken">
                 </button>
 
                 <!-- Modal -->
@@ -59,7 +69,7 @@
                                     <li>Spock beats scissors and rock</li>
                                 </ol>
                                 <div class="row end">
-                                    <button type="button" class="btnModal imPerfect"
+                                    <button id="closeBtn" type="button" class="btnModal imPerfect"
                                         data-bs-dismiss="modal" style="margin-right: 20px;">Close</button>
                                 </div>
                             </div>
@@ -67,8 +77,8 @@
                     </div>
                 </div>
 
-                <img id="playBtn" class="cursor" src="./assets/Play Shuriken.png" alt="">
-                <img id="modeBtn" class="cursor" src="./assets/Modes.png" alt="">
+                <img id="playBtn" class="cursor" src="./assets/Play Shuriken.png" alt="picture of play btn">
+                <img id="modeBtn" class="cursor" src="./assets/Modes.png" alt="picture of modes btn">
             </div>
             
             <div id="inject1v1" class="col none">
@@ -90,58 +100,10 @@
 
     <div id="fightDiv" class="container-fluid lotus">
     
-    <!-- <div class="row">
-            <div class="col samurai1Padding">
-                <h1 class="imPerfect white txtCenter score">0/1</h1>
-                <div class="center">
-                    <img src="./assets/samurai 1.png" alt="" class="samuraiSize">
-                </div>
-                <p class="imPerfect txtCenter cyan samurai">Samurai 1</p>
-                <h1 class="imPerfect cyan txtCenter choose">choose</h1>
-                <div class="center">
-                    <div class="between optionsDiv">
-                        <img id="p1Rock" src="./assets/rock icon.png" alt="">
-                        <img id="p1Paper" src="./assets/paper icon.png" alt="">
-                        <img id="p1Scissors" src="./assets/scissors icon.png" alt="">
-                        <img id="p1Lizzard" src="./assets/lizard icon.png" alt="">
-                        <img id="p1Spock" src="./assets/spock icon.png" alt="">
-                    </div>
-                </div>
-
-                <p id="p1Message" class="imPerfect txtCenter cyan message">Dont cheat</p>
-
-            </div>
-            <div class="col samurai2Padding">
-                <h1 class="imPerfect white txtCenter score">0/1</h1>
-                <div class="center">
-                    <img src="./assets/samurai 2.png" alt="" class="samuraiSize">
-                </div>
-                <p class="imPerfect txtCenter yellow samurai">Samurai 2</p>
-                <h1 class="imPerfect yellow txtCenter choose">choose</h1>
-                <div class="center">
-                    <div class="between optionsDiv">
-                    <img id="p2Rock" src="./assets/rock icon.png" alt="">
-                    <img id="p2Paper" src="./assets/paper icon.png" alt="">
-                    <img id="p2Scissors" src="./assets/scissors icon.png" alt="">
-                    <img id="p2Lizzard" src="./assets/lizard icon.png" alt="">
-                    <img id="p2Spock" src="./assets/spock icon.png" alt="">
-                </div>
-                </div>
-                
-                <p id="p2Message" class="imPerfect txtCenter yellow message">Dont cheat</p>
-            </div>
-        </div> -->
-
-        <!-- <button id="fightBtn" class="fightBtn imPerfect white">Fight</button>
-        <h1 class="txtCenter white imPerfect absolute vs">vs</h1> -->
+    
     </div>
 
     <div id="resultDiv" class="resultScreen absolute none">
-        <!-- <img class="winnerBg" src="./assets/resultscreenbg.png" alt="">
-        <h1 class="imPerfect white absolute winnerTxt">Samurai 1 Wins</h1>
-        <p class="winnerTxt2 firaCode absolute white">Samurai 1 chose to battle with rock and Samurai 2 chose to battle with scissors, as a result, Samurai 1 wins</p>
-        <button class=" absolute exitBtn imPerfect">EXiT</button>
-        <button class="absolute restartBtn imPerfect">Restart</button> -->
     </div>
 
 

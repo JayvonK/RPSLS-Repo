@@ -7,9 +7,11 @@ import {
 import { addSuddenDeathFight, fightDiv, addFT3Fight, addFT5Fight } from "./addFights.js";
 import { shurikenDiv } from "./addGameModes.js";
 import { AITrue, inject1v1 } from "./addVersus.js";
+import { sword, beepSound } from "./music.js";
 
 let home = document.getElementById("home");
 home.addEventListener('click', () => {
+    beepSound();
     if(lightMode){
         resultDiv.innerHTML = "";
         resultDiv.className = "resultScreen absolute none";
@@ -24,6 +26,8 @@ home.addEventListener('click', () => {
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
+        p1Choice = "";
+        p2Choice = "";
     } else {
         resultDiv.innerHTML = "";
         resultDiv.className = "resultScreen absolute none";
@@ -38,7 +42,21 @@ home.addEventListener('click', () => {
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
+        p1Choice = "";
+        p2Choice = "";
     }  
+})
+home.addEventListener('mouseover', (event) => {
+    home.src = "./assets/cyanHome.png";
+    if(lightMode){
+        home.src = "./assets/pinkHome.png";
+    }
+})
+home.addEventListener('mouseleave', (event) => {
+    home.src = "./assets/home icon.png";
+    if(lightMode){
+        home.src = "./assets/blackHome.png";
+    }
 })
 
 let p1Point = 0;
@@ -74,6 +92,7 @@ function SDWinner(winnerName, choice1, choice2) {
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
     exitBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.className += " none";
@@ -97,6 +116,7 @@ function SDWinner(winnerName, choice1, choice2) {
     restartBtn.className = "absolute restartBtn imPerfect";
     restartBtn.innerText = "restart";
     restartBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
@@ -153,6 +173,7 @@ function FT3Winner(winnerName, choice1, choice2) {
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
     exitBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.className += " none";
@@ -213,6 +234,7 @@ function FT5Winner(winnerName, choice1, choice2) {
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
     exitBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.className += " none";
@@ -263,10 +285,15 @@ function TieSD(choice1, choice2) {
     winnerTxt2.className = "winnerTxt2 firaCode absolute white";
     winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, both Samurais have come to a draw`;
 
+    if(AITrue){
+        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Supreme AI chose to battle with ${choice2}, as a result, both fighters have come to a draw`;
+    }
+
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
     exitBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.className += " none";
@@ -290,6 +317,7 @@ function TieSD(choice1, choice2) {
     contnueBtn.className = "absolute restartBtn imPerfect";
     contnueBtn.innerText = "continue";
     contnueBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
@@ -332,11 +360,15 @@ function TieFT3(choice1, choice2) {
     let winnerTxt2 = document.createElement("p");
     winnerTxt2.className = "winnerTxt2 firaCode absolute white";
     winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, both Samurais have come to a draw`;
+    if(AITrue){
+        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Supreme AI chose to battle with ${choice2}, as a result, both fighters have come to a draw`;
+    }
 
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
     exitBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.className += " none";
@@ -360,6 +392,7 @@ function TieFT3(choice1, choice2) {
     contnueBtn.className = "absolute restartBtn imPerfect";
     contnueBtn.innerText = "continue";
     contnueBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
@@ -402,11 +435,15 @@ function TieFT5(choice1, choice2) {
     let winnerTxt2 = document.createElement("p");
     winnerTxt2.className = "winnerTxt2 firaCode absolute white";
     winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Samurai 2 chose to battle with ${choice2}, as a result, both Samurais have come to a draw`;
+    if(AITrue){
+        winnerTxt2.innerText = `Samurai 1 chose to battle with ${choice1} and Supreme AI chose to battle with ${choice2}, as a result, both fighters have come to a draw`;
+    }
 
     let exitBtn = document.createElement("button");
     exitBtn.className = "absolute exitBtn imPerfect";
     exitBtn.innerText = "exit";
     exitBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.className += " none";
@@ -430,6 +467,7 @@ function TieFT5(choice1, choice2) {
     contnueBtn.className = "absolute restartBtn imPerfect";
     contnueBtn.innerText = "continue";
     contnueBtn.addEventListener("click", (event) => {
+        sword();
         resultDiv.innerHTML = "";
         resultDiv.className += " none";
         fightDiv.innerHTML = "";
@@ -787,6 +825,7 @@ function displayFT3Winner(choice1, choice2) {
         
         restartBtn.innerText = "restart";
         restartBtn.addEventListener("click", (event) => {
+            sword();
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
@@ -807,6 +846,7 @@ function displayFT3Winner(choice1, choice2) {
         }
         contnueBtn.innerText = "continue";
         contnueBtn.addEventListener("click", (event) => {
+            sword();
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
@@ -988,6 +1028,7 @@ function displayFT5Winner(choice1, choice2) {
         }
         restartBtn.innerText = "restart";
         restartBtn.addEventListener("click", (event) => {
+            sword();
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";
@@ -1008,6 +1049,7 @@ function displayFT5Winner(choice1, choice2) {
         }
         contnueBtn.innerText = "continue";
         contnueBtn.addEventListener("click", (event) => {
+            sword();
             resultDiv.innerHTML = "";
             resultDiv.className += " none";
             fightDiv.innerHTML = "";

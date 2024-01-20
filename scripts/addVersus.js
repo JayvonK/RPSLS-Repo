@@ -1,5 +1,6 @@
 import { addSuddenDeath, addFT3, addFT5 } from "./addGameModes.js";
 import { lightMode } from "./app.js";
+import { sword } from "./music.js";
 
 let AITrue = true;
 let inject1v1 = document.getElementById("inject1v1");
@@ -14,6 +15,7 @@ function addVersus () {
     }
     img1v1.className = "cursor";
     img1v1.addEventListener('click', (event) => {
+        sword();
         console.log("1v1 working");
         inject1v1.className += " none";
         addSuddenDeath();
@@ -43,6 +45,7 @@ function addVersus () {
     }
     imgAI.className = "cursor";
     imgAI.addEventListener('click', (event) => {
+        sword();
         inject1v1.className += " none";
         addSuddenDeath();
         addFT3();

@@ -1,4 +1,4 @@
-import { musicPlay, stopMusic, music } from "./music.js";
+import { musicPlay, stopMusic, music, sword, beepSound } from "./music.js";
 import { addVersus } from "./addVersus.js";
 import { lightTime, normalTime } from "./lightMode.js";
 
@@ -9,15 +9,18 @@ let playCol = document.getElementById("playCol");
 let injectRow = document.getElementById("injectRow");
 let fT3Col = document.getElementById("fT3Col");
 let modeBtn = document.getElementById("modeBtn");
-let p1Choice = "";
-let p2Choice = "";
+let closeBtn = document.getElementById("closeBtn");
 let lightMode = false;
 
 music.volume = 0.3;
 
 
+closeBtn.addEventListener('click', (event) => {
+    beepSound();
+})
 
 volume.addEventListener('click', () => {
+    beepSound();
     if(volume.alt === "volume icon")
     {
         stopMusic();
@@ -42,8 +45,10 @@ volume.addEventListener('click', () => {
 })
 
 playBtn.addEventListener('click', (event) => {
+    sword();
     playCol.className += " none";
     addVersus();
+    
 })
 playBtn.addEventListener('mouseover', (event) => {
     playBtn.src = "./assets/cyanPlay Shuriken.png";
@@ -59,6 +64,7 @@ playBtn.addEventListener("mouseleave", (event) => {
 })
 
 modeBtn.addEventListener('click', () => {
+    beepSound();
     if(lightMode){
         lightMode = false;
     } else {
@@ -71,6 +77,7 @@ modeBtn.addEventListener('click', () => {
     }else{
         normalTime();
     }
+    
 })
 modeBtn.addEventListener('mouseover', (event) => {
     modeBtn.src = "./assets/cyanModes.png";
@@ -87,4 +94,4 @@ modeBtn.addEventListener('mouseover', (event) => {
 
 
 
-export { playCol, p1Choice, p2Choice, body, injectRow, fT3Col, playBtn, modeBtn, volume, lightMode }
+export { playCol, body, injectRow, fT3Col, playBtn, modeBtn, volume, lightMode }
