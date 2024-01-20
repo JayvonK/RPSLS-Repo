@@ -26,8 +26,6 @@ home.addEventListener('click', () => {
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
-        p1Choice = "";
-        p2Choice = "";
     } else {
         resultDiv.innerHTML = "";
         resultDiv.className = "resultScreen absolute none";
@@ -42,8 +40,6 @@ home.addEventListener('click', () => {
         fightDiv.innerHTML = "";
         p1Point = 0;
         p2Point = 0;
-        p1Choice = "";
-        p2Choice = "";
     }  
 })
 home.addEventListener('mouseover', (event) => {
